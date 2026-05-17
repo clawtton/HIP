@@ -45,6 +45,28 @@ http://localhost:4173/app/
 
 You can also open `app/index.html` directly in a browser.
 
+## Presentation Highlights
+
+### Trade.xyz Reference Economics
+
+Trade[XYZ] is used as the dated reference case for profit potential, not as a guaranteed HIP.markets base case. The snapshot below shows a public 30-day benchmark: `$2.50B` volume, `60` listed markets, `$121.98K` total fees, an estimated `$60.99K` deployer share before operating costs, and `3.47%` gross implied APR on the 500,000 HYPE minimum stake.
+
+![Trade.xyz reference economics](presentation/tradexyz-reference.png)
+
+Supporting math and source notes are in [presentation/REFERENCE_CALCULATIONS.md](presentation/REFERENCE_CALCULATIONS.md).
+
+### Demo Operator Console
+
+The demo opens directly into the operator vault, not a marketing landing page. It shows the launch rail, 500,000 HYPE stake requirement, APR model, deposit ticket, oracle cadence, risk state, and operator monitor in one trading-terminal-style workflow.
+
+![HIP.markets demo dashboard](presentation/demo-dashboard.png)
+
+### Fee Ledger And Audit Flow
+
+The vault UI includes an inspectable fee-history panel so stakers can see how market volume, builder/deployer fees, reserve contributions, and distributions are meant to connect.
+
+![HIP.markets fee ledger](presentation/demo-fee-ledger-view.png)
+
 ## Core User Flow
 
 1. User deposits HYPE into the HIP.markets vault on HyperEVM.
