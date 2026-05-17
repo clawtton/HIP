@@ -62,16 +62,27 @@ a {
 
 .brand {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
   padding: 0 18px;
 }
 
-.brand strong {
-  font-size: 18px;
+.brand img {
+  width: 30px;
+  height: 30px;
 }
 
-.brand span,
+.brand span {
+  display: grid;
+  gap: 1px;
+}
+
+.brand strong {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.brand small,
 .wallet,
 .rail-heading span,
 .panel-head span,
@@ -200,7 +211,7 @@ nav a:hover,
 
 .hero-strip {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 260px;
+  grid-template-columns: minmax(0, 1fr) 275px;
   gap: 14px;
   margin-bottom: 14px;
 }
@@ -244,6 +255,22 @@ h1 {
   margin-bottom: 0;
   font-size: 32px;
   line-height: 1.08;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.hero-badges span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--muted);
+  padding: 6px 10px;
+  font-size: 12px;
 }
 
 .stake-card {
@@ -611,6 +638,44 @@ td {
 .health-stack {
   display: grid;
   gap: 10px;
+}
+
+.sentinel-card {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+  border: 1px solid rgba(50, 210, 150, 0.35);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(50, 210, 150, 0.16), transparent 36%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+  padding: 12px;
+}
+
+.sentinel-card img {
+  width: 82px;
+  height: 82px;
+  border-radius: 18px;
+}
+
+.sentinel-card div {
+  min-width: 0;
+}
+
+.sentinel-card span,
+.sentinel-card small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.sentinel-card strong {
+  display: block;
+  margin: 3px 0;
+  font-size: 18px;
 }
 
 .health-stack > div {

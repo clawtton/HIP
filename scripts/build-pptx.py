@@ -18,6 +18,15 @@ SLIDES = [
         ],
     },
     {
+        "title": "Brand System",
+        "bullets": [
+            "Original terminal-native brand for an operator-vault product.",
+            "HIP Cat is a risk sentinel, not a yield mascot.",
+            "Mint = execution, blue = oracle data, amber = risk.",
+        ],
+        "image": "brand-system.png",
+    },
+    {
         "title": "The Problem",
         "bullets": [
             "HIP-3 DEXs need 500,000 HYPE staked.",

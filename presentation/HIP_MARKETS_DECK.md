@@ -8,7 +8,18 @@ Community-backed HIP-3 markets on Hyperliquid.
 
 Fund the market operator. Share the builder fees.
 
-## Slide 2: The Problem
+## Slide 2: Brand System
+
+![HIP.markets brand system](brand-system.png)
+
+HIP.markets now has an original visual identity:
+
+- terminal-native operator-vault brand;
+- HIP Cat as a risk sentinel;
+- mint for execution, blue for oracle data, amber for risk;
+- a Hyperliquid-native cultural nod without copying Hyperliquid's marks or Hypurr assets.
+
+## Slide 3: The Problem
 
 HIP-3 gives builders permissionless market deployment, but one DEX requires 500,000 HYPE staked.
 
@@ -19,7 +30,7 @@ That stake is not enough by itself:
 - users need clear fee accounting;
 - stakers need to see slashing risk beside APR.
 
-## Slide 3: Product Thesis
+## Slide 4: Product Thesis
 
 HIP.markets is not passive liquid staking.
 
@@ -27,7 +38,7 @@ HIP.markets is the operator.
 
 Users deposit HYPE to back the HIP.markets deployer stake. The HIP.markets team launches markets, runs oracles, manages risk, and shares net deployer fees with stakers.
 
-## Slide 4: Why Now
+## Slide 5: Why Now
 
 Hyperliquid has moved from one exchange into market infrastructure.
 
@@ -35,7 +46,7 @@ HIP-3 lets specialist operators list new perpetual markets while HyperCore still
 
 The bottleneck shifts from matching-engine infrastructure to capital, oracle operations, and operator credibility.
 
-## Slide 5: Trade.xyz Reference
+## Slide 6: Trade.xyz Reference
 
 ![Trade.xyz reference calculations](tradexyz-reference.png)
 
@@ -49,7 +60,7 @@ Trade.xyz is the reference proof that HIP-3 can support meaningful market demand
 
 Use this as profit-potential evidence, not as the base case.
 
-## Slide 6: Successful Market Pattern
+## Slide 7: Successful Market Pattern
 
 Trade.xyz's highest-volume 30-day tickers are not only crypto assets.
 
@@ -61,7 +72,7 @@ The leading markets include synthetic index exposure, commodities, semiconductor
 
 HIP.markets should launch only where oracle confidence, liquidity, and narrative demand overlap.
 
-## Slide 7: Revenue Interpretation
+## Slide 8: Revenue Interpretation
 
 Reference economics:
 
@@ -73,7 +84,7 @@ Reference economics:
 
 This is a gross underwriting input. It is not distributable profit until oracle, data, market-maker, legal, protocol, reserve, and incident-response costs are deducted.
 
-## Slide 8: UI Benchmark
+## Slide 9: UI Benchmark
 
 trade.xyz proves that serious HIP-3 markets need trading-terminal density.
 
@@ -86,7 +97,7 @@ We studied its documented UI patterns:
 - Ghost Mode-style observability;
 - explicit user warnings.
 
-## Slide 9: UX Translation
+## Slide 10: UX Translation
 
 HIP.markets adapts trading-terminal UX to an operator vault:
 
@@ -96,7 +107,7 @@ HIP.markets adapts trading-terminal UX to an operator vault:
 - Ghost Mode becomes operator monitor;
 - execution summary becomes fee and APR accounting.
 
-## Slide 10: Demo Walkthrough
+## Slide 11: Demo Walkthrough
 
 ![HIP.markets demo dashboard](demo-dashboard.png)
 
@@ -104,7 +115,7 @@ The first screen is not a landing page.
 
 It is the usable operator console: vault capacity, projected APR, oracle cadence, risk state, market rail, fee model, deposit ticket, and monitoring panel are visible in one workflow.
 
-## Slide 11: Demo - Fee Model
+## Slide 12: Demo - Fee Model
 
 Judges can change the core assumptions:
 
@@ -119,7 +130,7 @@ Judges can change the core assumptions:
 
 APR updates instantly.
 
-## Slide 12: Demo - Deposit Ticket
+## Slide 13: Demo - Deposit Ticket
 
 The deposit ticket mirrors a trading order pane:
 
@@ -131,7 +142,7 @@ The deposit ticket mirrors a trading order pane:
 - user-specific estimated rewards;
 - slashing warning.
 
-## Slide 13: Demo - Audit Ledger
+## Slide 14: Demo - Audit Ledger
 
 ![HIP.markets demo fee ledger](demo-fee-ledger-view.png)
 
@@ -144,7 +155,7 @@ The bottom panel turns fee sharing into an inspectable ledger:
 
 This is where stakers verify that the operator is behaving.
 
-## Slide 14: Demo - Contract Wiring
+## Slide 15: Demo - Contract Wiring
 
 ![HIP.markets contract wiring](demo-contract-wiring.png)
 
@@ -156,7 +167,7 @@ The demo now exposes the onchain transaction path:
 - operator multisig calls `escrowStakeToController()`;
 - risk council records HIP-3 operator approval and markets-live status.
 
-## Slide 15: Contract Depth
+## Slide 16: Contract Depth
 
 The reference contracts now model more of the actual business:
 
@@ -167,7 +178,7 @@ The reference contracts now model more of the actual business:
 - oracle health reporting;
 - launch checklist and risk-state registry.
 
-## Slide 16: System Flow
+## Slide 17: System Flow
 
 1. HYPE holders deposit into the HyperEVM vault.
 2. Vault backs the HIP.markets deployer stake.
@@ -179,7 +190,7 @@ The reference contracts now model more of the actual business:
 8. Operating, protocol, and reserve deductions are applied.
 9. Net deployer fees distribute to stakers.
 
-## Slide 17: Economics
+## Slide 18: Economics
 
 Base model:
 
@@ -195,7 +206,7 @@ Benchmark model:
 - Trade.xyz trailing fees imply approximately 3.47% gross APR on the minimum stake;
 - the delta between base and benchmark highlights why market selection and volume concentration matter.
 
-## Slide 18: Risk Controls
+## Slide 19: Risk Controls
 
 HIP.markets wins by being conservative:
 
@@ -206,7 +217,7 @@ HIP.markets wins by being conservative:
 - maintain slashing reserve;
 - pause deposits during oracle incidents.
 
-## Slide 19: Cost Stack
+## Slide 20: Cost Stack
 
 The 500k HYPE stake is the entry ticket, not the full cost of business.
 
@@ -220,7 +231,7 @@ HIP.markets must budget for:
 - legal/compliance work;
 - reserves for slashing, incidents, and low-volume periods.
 
-## Slide 20: MVP
+## Slide 21: MVP
 
 The MVP is intentionally narrow:
 
@@ -232,7 +243,7 @@ The MVP is intentionally narrow:
 - explicit risk disclosure;
 - no third-party operator financing.
 
-## Slide 21: Roadmap
+## Slide 22: Roadmap
 
 V1: prove the operator vault and fee-sharing model.
 
@@ -240,7 +251,7 @@ V2: add more HIP.markets market vaults and automated fee verification.
 
 V3: add risk tranching, secondary vault shares, HIP-4 outcome markets, and possibly third-party operator financing once the trust model is mature.
 
-## Slide 22: Competitive Position
+## Slide 23: Competitive Position
 
 trade.xyz and HyENA operate markets directly.
 
@@ -250,7 +261,7 @@ The wedge is not more markets.
 
 The wedge is turning HYPE holders into economic backers of the market operator.
 
-## Slide 23: Ask
+## Slide 24: Ask
 
 We are looking for:
 
@@ -260,7 +271,7 @@ We are looking for:
 - security reviewers;
 - Hyperliquid ecosystem feedback on deployer custody and fee routing.
 
-## Slide 24: Closing
+## Slide 25: Closing
 
 HIP.markets turns builder-deployed markets into a community-backed operator business.
 

@@ -1,0 +1,16 @@
+<svg width="420" height="112" viewBox="0 0 420 112" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">HIP.markets logo</title>
+  <desc id="desc">A mint-green operator vault mark with a cat-ear market glyph and HIP.markets wordmark.</desc>
+  <rect width="420" height="112" rx="24" fill="#07090C"/>
+  <g transform="translate(22 20)">
+    <path d="M20 64V27.5C20 21.149 25.149 16 31.5 16H58.5C64.851 16 70 21.149 70 27.5V64H20Z" fill="#10151B" stroke="#32D296" stroke-width="3"/>
+    <path d="M29 18L37 6L45 18H29Z" fill="#32D296"/>
+    <path d="M45 18L53 6L61 18H45Z" fill="#68A7FF"/>
+    <path d="M31 48L39 39L47 45L59 31" stroke="#32D296" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="36" cy="28" r="3" fill="#EDF3F6"/>
+    <circle cx="54" cy="28" r="3" fill="#EDF3F6"/>
+    <path d="M41 58H49" stroke="#68A7FF" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="114" y="51" fill="#F4F7F8" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.5">HIP.markets</text>
+  <text x="116" y="78" fill="#8D9BA7" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600">operator vaults for HIP-3 markets</text>
+</svg>

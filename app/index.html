@@ -4,13 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HIP.markets Demo</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="appbar">
       <div class="brand">
-        <strong>HIP.markets</strong>
-        <span>Operator Vault</span>
+        <img src="./assets/favicon.svg" alt="" />
+        <span>
+          <strong>HIP.markets</strong>
+          <small>Operator Vault</small>
+        </span>
       </div>
       <nav aria-label="Product sections">
         <a href="#vault">Vault</a>
@@ -63,6 +67,11 @@
           <div>
             <p class="eyebrow">Community-backed HIP-3 operator</p>
             <h1>Fund the HIP.markets deployer stake, then track every fee and risk signal.</h1>
+            <div class="hero-badges" aria-label="Operator highlights">
+              <span>500k HYPE target</span>
+              <span>Slashable stake aware</span>
+              <span>Fee-recipient transparent</span>
+            </div>
           </div>
           <div class="stake-card">
             <span>Required stake</span>
@@ -279,6 +288,14 @@
       </section>
 
       <aside class="risk-rail" id="risk">
+        <div class="sentinel-card">
+          <img src="./assets/hip-cat.svg" alt="HIP.markets risk sentinel cat mascot" />
+          <div>
+            <span>Risk sentinel</span>
+            <strong>HIP Cat</strong>
+            <small>Watching oracle cadence, fee flow, and stake health.</small>
+          </div>
+        </div>
         <div class="panel-head compact">
           <span>Operator Monitor</span>
           <strong>Green</strong>

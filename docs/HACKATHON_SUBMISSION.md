@@ -19,6 +19,7 @@ HIP.markets creates a HYPE vault on HyperEVM. Deposited HYPE backs the HIP.marke
 ## What We Built
 
 - Static demo for the vault, APR model, wallet-aware transaction path, and HIP.markets operator console.
+- Original HIP.markets logo, favicon, and HIP Cat risk-sentinel mascot.
 - Economic model with APR and operator-readiness tests.
 - Reference Solidity vault contract with receipt shares, withdrawal queue, reward accounting, stake-controller escrow, operator lifecycle, and slashing accounting.
 - Reference registry contract for launch checklist, market state, oracle health, fee epochs, and risk transparency.
@@ -36,6 +37,10 @@ The demo is inspired by trade.xyz's documented trading interface, but adapted to
 - positions-style tabs for vault shares, fee history, oracle updates, and market launches;
 - operator monitor that borrows the spirit of Ghost Mode observability by exposing operator state, fee recipient, oracle updater, reserve, OI utilization, and incident runbook;
 - contract wiring panel for configuring vault/token addresses, connecting a wallet, approving HYPE, depositing, claiming rewards, and showing the multisig/risk-council steps needed to become a slashable HIP-3 operator.
+
+## Brand
+
+HIP.markets now has a distinct terminal-native brand system. HIP Cat nods to Hyperliquid's cat culture while staying original and tied to the product's purpose: watching risk, oracle health, fee flow, and stake readiness. The brand system is documented in `docs/BRAND_SYSTEM.md`.
 
 ## Technical Stack
 
