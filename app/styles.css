@@ -288,6 +288,7 @@ h1 {
 }
 
 .kpi-grid,
+.context-strip,
 .walk-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -296,12 +297,23 @@ h1 {
 }
 
 .kpi-grid article,
+.context-strip article,
 .walk-grid article,
 .flow-steps article {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
   padding: 14px;
+}
+
+.context-strip article {
+  background:
+    linear-gradient(180deg, rgba(104, 167, 255, 0.09), rgba(255, 255, 255, 0.015)),
+    var(--panel-3);
+}
+
+.context-strip strong {
+  color: var(--blue);
 }
 
 article strong {

@@ -8,6 +8,14 @@ HIP.markets is not a generic staking wrapper. It is a HIP-3 market operator fina
 
 Users deposit HYPE, receive vault shares, and help fund the 500,000 HYPE slashable stake required for HIP.markets to operate its own HIP-3 perpetual DEX. HIP.markets then operates markets, runs oracle infrastructure, manages liquidity/risk, and shares net deployer fees with stakers.
 
+## Why This Is A Real Problem
+
+Hyperliquid is already exchange-scale. The latest research snapshot used in this repo cites roughly $307B of 30-day perp volume, $15.6B of 24-hour perp volume, $13.3B of open interest, and $1.1B of annualized revenue on DefiLlama.
+
+HIP-3 opens those rails to new market operators, but the minimum stake is 500,000 HYPE. At the 2026-05-17 API price check of $42.7015, that is about $21.35M before oracle, data, market-maker, audit, legal, and incident-response costs. That is too large for many strong operators and too inaccessible for most HYPE holders.
+
+The standard operator model also leaves a community-alignment gap: deployer fees accrue to the operator fee recipient, while HYPE holders mostly receive ordinary staking yield, currently referenced around 2.37% APY. HIP.markets makes the community the operator stake base and shares net deployer fees back to the people who funded the stake.
+
 ## What To Open First
 
 1. Run the demo:

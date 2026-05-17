@@ -10,6 +10,14 @@ The product is not simple liquid staking. It is a community-backed exchange-oper
 
 HIP-3 turns market creation into an operator business. Builders can deploy perp DEXs on HyperCore, configure markets, run oracles, and receive deployer fees. The 500,000 HYPE stake requirement is a capital bottleneck. HIP.markets converts that bottleneck into a community-backed model: HYPE holders provide the deployer stake, the HIP.markets team operates the DEX, and stakers share in net builder fees.
 
+## Judge-Ready Market Context
+
+HIP.markets should be explained from Hyperliquid's strength, not from generic DeFi yield. DefiLlama's Hyperliquid perp reference showed roughly $307.3B in 30-day perp volume, $15.6B in 24-hour perp volume, $13.3B in open interest, and $1.1B in annualized revenue during the 2026-05-17 research pass. HIP-3 builders are therefore not launching into a cold-start venue; they are building on top of proven exchange-scale infrastructure.
+
+The bottleneck is the operator stake. Hyperliquid's HIP-3 docs specify a 500,000 HYPE mainnet stake requirement per perp DEX. At the 2026-05-17 Hyperliquid API HYPE price check of $42.7015, that stake is about $21.35M before oracle, data, market-maker, legal, audit, and incident-response costs. For many operators this is too capital-intensive; for most HYPE holders it is too large to access directly.
+
+The incentive gap is equally important. Trade.xyz demonstrates that HIP-3 can attract real demand, but the standard operator model routes deployer fees to the operator fee recipient. Ordinary HYPE staking references are around 2.37% APY, so HIP.markets creates a distinct higher-risk product category: HYPE holders can underwrite a market operator and receive transparent exposure to net deployer fees from markets they helped fund.
+
 ## Product
 
 ### MVP

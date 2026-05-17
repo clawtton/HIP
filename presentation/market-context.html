@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HIP.markets Market Context</title>
+    <style>
+      :root {
+        --bg: #07090c;
+        --panel: #10151b;
+        --line: #26313c;
+        --text: #edf3f6;
+        --muted: #8d9ba7;
+        --green: #32d296;
+        --blue: #68a7ff;
+        --yellow: #f4c45f;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 1280px;
+        height: 720px;
+        margin: 0;
+        overflow: hidden;
+        background:
+          linear-gradient(135deg, rgba(104, 167, 255, 0.12), transparent 42%),
+          linear-gradient(315deg, rgba(50, 210, 150, 0.1), transparent 46%),
+          var(--bg);
+        color: var(--text);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+      }
+
+      .wrap {
+        padding: 42px 44px;
+      }
+
+      .eyebrow {
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        width: 1080px;
+        margin: 10px 0 24px;
+        font-size: 46px;
+        line-height: 1.03;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 22px;
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012));
+        padding: 20px;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      .metric {
+        min-height: 112px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #0c1117;
+        padding: 14px;
+      }
+
+      .metric span,
+      .source,
+      .note {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .metric strong {
+        display: block;
+        margin: 10px 0 4px;
+        font-size: 28px;
+      }
+
+      .thesis {
+        display: grid;
+        gap: 12px;
+      }
+
+      .thesis div {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #0c1117;
+        padding: 15px;
+      }
+
+      .thesis strong {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--text);
+      }
+
+      .thesis p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .highlight {
+        color: var(--yellow);
+      }
+
+      .green {
+        color: var(--green);
+      }
+
+      .source {
+        margin-top: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <div class="eyebrow">Why HIP.markets is not a small idea</div>
+      <h1>Hyperliquid already has exchange-scale flow. HIP-3 turns market creation into a capital-backed operator business.</h1>
+      <div class="grid">
+        <section class="panel">
+          <div class="metrics">
+            <div class="metric"><span>30d perp volume</span><strong>$307.3B</strong><small>DefiLlama</small></div>
+            <div class="metric"><span>24h perp volume</span><strong>$15.6B</strong><small>DefiLlama</small></div>
+            <div class="metric"><span>Open interest</span><strong>$13.3B</strong><small>DefiLlama</small></div>
+            <div class="metric"><span>Annualized revenue</span><strong>$1.1B</strong><small>DefiLlama</small></div>
+            <div class="metric"><span>HIP-3 stake</span><strong class="highlight">$21.35M</strong><small>500k HYPE @ $42.7015</small></div>
+            <div class="metric"><span>Native HYPE staking</span><strong class="highlight">~2.37%</strong><small>APY reference</small></div>
+          </div>
+          <div class="source">Sources: DefiLlama Hyperliquid perps, Hyperliquid API, Hyperliquid docs, Hyperliquid Guide. Retrieved 2026-05-17.</div>
+        </section>
+        <section class="panel thesis">
+          <div>
+            <strong>Problem</strong>
+            <p>Only operators who can source roughly 500k HYPE can deploy a HIP-3 perp DEX. That is a major capital blocker before oracle, data, market-maker, audit, and legal costs.</p>
+          </div>
+          <div>
+            <strong>Fee gap</strong>
+            <p>Trade.xyz proves demand, but standard deployer economics accrue to the operator fee recipient. HYPE holders do not automatically share the operator upside.</p>
+          </div>
+          <div>
+            <strong class="green">HIP.markets answer</strong>
+            <p>Community-funded HYPE backs the operator stake. HIP.markets operates curated markets and shares net deployer fees with the stakers who made those markets possible.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

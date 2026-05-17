@@ -21,6 +21,16 @@ HIP.markets pools HYPE from users on HyperEVM so the HIP.markets team can satisf
 
 This submission is intentionally not framed as generic liquid staking. HIP.markets is an exchange operator with a vault layer: users are backing the HIP.markets DEX, oracle operations, liquidity program, market risk controls, and fee-sharing system.
 
+## Why This Exists
+
+Hyperliquid is already a top-tier onchain derivatives venue, not an empty ecosystem. In the latest research pass, DefiLlama showed Hyperliquid at roughly `$307B` 30-day perp volume, `$15.6B` 24-hour perp volume, `$13.3B` open interest, and `$1.1B` annualized revenue.
+
+HIP-3 turns that exchange infrastructure into open market-operator infrastructure. Any qualified builder can deploy a perp DEX, but the blocker is severe: Hyperliquid docs specify a **500,000 HYPE mainnet staking requirement** for one HIP-3 perp DEX. Using the 2026-05-17 Hyperliquid API HYPE price check of `$42.7015`, that stake is roughly **$21.35M** before oracle, data, market-maker, audit, legal, and operating costs.
+
+At the same time, ordinary HYPE staking is low-yield by comparison. Current liquid-staking references put HYPE staking around **2.37% APY**. HIP.markets is therefore not trying to replace staking with "free yield." It creates a different, higher-risk category: HYPE holders can back a market operator and share net deployer fees from markets they help enable.
+
+Trade.xyz shows the opportunity and the gap. Trade[XYZ] proves HIP-3 can attract real trading demand, but the standard deployer model routes deployer fees to the operator fee recipient. HIP.markets changes that incentive design: community HYPE funds the 500k stake, HIP.markets operates the markets, and net deployer fees can flow back to the stakers who made the operator possible.
+
 ## Hackathon Submission
 
 - **Project:** HIP.markets
@@ -69,6 +79,12 @@ Trade[XYZ] is used as the dated reference case for profit potential, not as a gu
 ![Trade.xyz reference economics](presentation/tradexyz-reference.png)
 
 Supporting math and source notes are in [presentation/REFERENCE_CALCULATIONS.md](presentation/REFERENCE_CALCULATIONS.md).
+
+### Hyperliquid Market Context
+
+Judges should understand why the addressable market is large before they evaluate the product. Hyperliquid's scale, the 500k HYPE requirement, and the low baseline staking APY are the setup for HIP.markets.
+
+![Hyperliquid market context](presentation/market-context.png)
 
 ### Demo Operator Console
 
@@ -129,6 +145,8 @@ The opportunity is not "stake HYPE and forget it." The opportunity is to build a
 - [Enhancement Prompt](docs/ENHANCEMENT_PROMPT.md)
 - [Judging Guide](docs/JUDGING_GUIDE.md)
 - [Deployment and Security Plan](docs/DEPLOYMENT_AND_SECURITY_PLAN.md)
+- [Market Context](docs/MARKET_CONTEXT.md)
+- [Jeff Yan-Inspired Review](docs/JEFF_YAN_REVIEW.md)
 - [Oracle Operations Plan](docs/ORACLE_OPERATIONS.md)
 - [Risk Register](docs/RISK_REGISTER.md)
 - [UI/UX Research Notes](docs/UI_UX_RESEARCH.md)

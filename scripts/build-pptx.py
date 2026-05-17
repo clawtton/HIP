@@ -27,6 +27,47 @@ SLIDES = [
         "image": "brand-system.png",
     },
     {
+        "title": "Hyperliquid Is Already Exchange-Scale",
+        "bullets": [
+            "DefiLlama reference: $307.3B 30d perp volume, $15.6B 24h perp volume, and $13.3B open interest.",
+            "HIP-3 builders are plugging into proven exchange-scale flow, not an empty ecosystem.",
+            "The question is who can finance, operate, and risk-manage new markets.",
+        ],
+        "image": "market-context.png",
+    },
+    {
+        "title": "The 500k HYPE Blocker",
+        "bullets": [
+            "HIP-3 mainnet requires 500,000 HYPE staked per perp DEX.",
+            "At $42.7015 HYPE, that is roughly $21.35M before oracle, maker, data, legal, audit, and incident costs.",
+            "HIP.markets turns that blocker into a community-backed operator stake.",
+        ],
+    },
+    {
+        "title": "Why HYPE Holders Care",
+        "bullets": [
+            "Current HYPE staking references are around 2.37% APY.",
+            "HIP.markets offers higher-risk exposure to net deployer fees from markets that stakers help enable.",
+            "This is exchange-operator underwriting, not passive liquid staking.",
+        ],
+    },
+    {
+        "title": "Operator Fees Should Not Be Invisible",
+        "bullets": [
+            "Trade.xyz proves HIP-3 can attract real demand.",
+            "Under the standard operator model, deployer fees accrue to the operator fee recipient.",
+            "HIP.markets changes the design: community HYPE funds the stake, HIP.markets operates the DEX, and net deployer fees can flow back to stakers.",
+        ],
+    },
+    {
+        "title": "Jeff Yan-Inspired Product Bar",
+        "bullets": [
+            "Do not look like a yield wrapper; look like an underwriting and operator business.",
+            "Treat 500k HYPE as a quality filter, not a loophole.",
+            "Reliability beats launch count: fewer markets, better oracles, clearer fee accounting.",
+        ],
+    },
+    {
         "title": "The Problem",
         "bullets": [
             "HIP-3 DEXs need 500,000 HYPE staked.",
