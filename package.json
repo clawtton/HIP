@@ -1,0 +1,22 @@
+{
+  "name": "hip-markets",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Community-backed HIP-3 market operator prototype for Hyperliquid.",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/economic-model.test.js",
+    "validate": "node scripts/validate-submission.js",
+    "build:deck": "python3 scripts/build-pptx.py",
+    "serve": "node scripts/serve.js"
+  },
+  "keywords": [
+    "hyperliquid",
+    "hyperevm",
+    "hip-3",
+    "hype",
+    "perpetuals",
+    "hackathon"
+  ],
+  "license": "MIT"
+}

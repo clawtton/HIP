@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HIP.markets Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">HyperEVM x HIP-3</p>
+        <h1>HIP.markets</h1>
+      </div>
+      <a class="ghost" href="../docs/HACKATHON_SUBMISSION.md">Submission Notes</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Community-backed market operator</p>
+          <h2>Pool HYPE. Launch HIP-3 markets. Share builder fees.</h2>
+          <p>
+            HIP.markets uses deposited HYPE as the slashable stake for the HIP.markets team's own
+            builder-deployed perpetual DEX on Hyperliquid. Stakers receive a share of net deployer
+            fees while taking explicit operator, oracle, and slashing risk.
+          </p>
+          <div class="hero-actions">
+            <a href="#calculator" class="primary">Model Vault APR</a>
+            <a href="../docs/BUSINESS_PRODUCT_SPEC.md" class="secondary">Read Spec</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="HIP.markets operating loop">
+          <div class="loop-step">1. HYPE holders deposit</div>
+          <div class="loop-step">2. Vault backs HIP.markets deployer stake</div>
+          <div class="loop-step">3. HIP.markets runs markets and oracles</div>
+          <div class="loop-step">4. Net builder fees flow back to stakers</div>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="MVP assumptions">
+        <article>
+          <span>Required HIP-3 stake</span>
+          <strong>500,000 HYPE</strong>
+        </article>
+        <article>
+          <span>Initial market count</span>
+          <strong>3 tickers</strong>
+        </article>
+        <article>
+          <span>Launch posture</span>
+          <strong>Operator-first</strong>
+        </article>
+        <article>
+          <span>Risk model</span>
+          <strong>Slashable stake</strong>
+        </article>
+      </section>
+
+      <section id="calculator" class="calculator">
+        <div class="section-heading">
+          <p class="eyebrow">Economic model</p>
+          <h2>Estimate staker APR from builder fees</h2>
+          <p>
+            This model is intentionally transparent. It does not assume all deployer fees become
+            profit. Operating fees, protocol fees, and reserves are deducted first.
+          </p>
+        </div>
+
+        <form class="grid-form" id="model-form">
+          <label>
+            HYPE price
+            <input id="hypePrice" type="number" min="1" step="0.01" value="42.27" />
+          </label>
+          <label>
+            HYPE staked
+            <input id="stakedHype" type="number" min="1" step="1000" value="500000" />
+          </label>
+          <label>
+            Daily volume
+            <input id="dailyVolume" type="number" min="0" step="1000000" value="50000000" />
+          </label>
+          <label>
+            Effective fee bps
+            <input id="effectiveFeeBps" type="number" min="0" step="0.1" value="6" />
+          </label>
+          <label>
+            Deployer share
+            <input id="deployerShare" type="number" min="0" max="100" step="1" value="50" />
+          </label>
+          <label>
+            Operating fee
+            <input id="operatingFeeShare" type="number" min="0" max="100" step="1" value="20" />
+          </label>
+          <label>
+            Protocol fee
+            <input id="protocolFeeShare" type="number" min="0" max="100" step="1" value="10" />
+          </label>
+          <label>
+            Reserve contribution
+            <input id="reserveShare" type="number" min="0" max="100" step="1" value="10" />
+          </label>
+        </form>
+
+        <div class="results">
+          <article>
+            <span>Stake value</span>
+            <strong id="stakeUsd">$0</strong>
+          </article>
+          <article>
+            <span>Gross builder fees/day</span>
+            <strong id="grossBuilderFees">$0</strong>
+          </article>
+          <article>
+            <span>Net rewards/day</span>
+            <strong id="netDailyRewards">$0</strong>
+          </article>
+          <article class="highlight">
+            <span>Estimated APR</span>
+            <strong id="apr">0.0%</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="two-column">
+        <div>
+          <p class="eyebrow">MVP</p>
+          <h2>Launch with the first three markets</h2>
+          <p>
+            The first HIP.markets DEX should start with three oracle-simple, liquid markets to avoid
+            additional HIP-3 auction costs while proving fee routing, monitoring, and withdrawal logic.
+          </p>
+        </div>
+        <ul class="checklist">
+          <li>One HIP.markets-operated HIP-3 DEX</li>
+          <li>One HYPE vault with conservative caps</li>
+          <li>Weekly fee distributions</li>
+          <li>Oracle health dashboard</li>
+          <li>Slashing reserve contribution</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <span>Hackathon prototype. Not audited. Not financial advice.</span>
+      <a href="https://github.com/clawtton/HIP">GitHub</a>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
