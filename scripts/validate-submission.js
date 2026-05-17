@@ -17,6 +17,7 @@ const required = [
   "docs/ENHANCEMENT_PROMPT.md",
   "docs/JUDGING_GUIDE.md",
   "docs/JEFF_YAN_REVIEW.md",
+  "docs/INVESTOR_CRITICAL_REVIEW_AND_EXECUTION_PLAN.md",
   "docs/MARKET_CONTEXT.md",
   "docs/POLISH_AUDIT.md",
   "app/assets/hip-markets-logo.svg",

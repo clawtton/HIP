@@ -157,6 +157,7 @@ The opportunity is not "stake HYPE and forget it." The opportunity is to build a
 - [Deployment and Security Plan](docs/DEPLOYMENT_AND_SECURITY_PLAN.md)
 - [Market Context](docs/MARKET_CONTEXT.md)
 - [Jeff Yan-Inspired Review](docs/JEFF_YAN_REVIEW.md)
+- [Investor Critical Review And Execution Plan](docs/INVESTOR_CRITICAL_REVIEW_AND_EXECUTION_PLAN.md)
 - [Oracle Operations Plan](docs/ORACLE_OPERATIONS.md)
 - [Risk Register](docs/RISK_REGISTER.md)
 - [UI/UX Research Notes](docs/UI_UX_RESEARCH.md)
