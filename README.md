@@ -23,9 +23,9 @@ This submission is intentionally not framed as generic liquid staking. HIP.marke
 
 ## Why This Exists
 
-Hyperliquid is already a top-tier onchain derivatives venue, not an empty ecosystem. In the latest research pass, DefiLlama showed Hyperliquid at roughly `$307B` 30-day perp volume, `$15.6B` 24-hour perp volume, `$13.3B` open interest, and `$1.1B` annualized revenue.
+Hyperliquid is already a top-tier onchain derivatives venue, not an empty ecosystem. In the latest demand snapshot, DefiLlama showed Hyperliquid Perps at roughly `$164B` 30-day perp volume, `$7.3B` open interest, `$775.7M` annualized fees, and `$701.1M` annualized revenue.
 
-HIP-3 turns that exchange infrastructure into open market-operator infrastructure. Any qualified builder can deploy a perp DEX, but the blocker is severe: Hyperliquid docs specify a **500,000 HYPE mainnet staking requirement** for one HIP-3 perp DEX. Using the 2026-05-17 Hyperliquid API HYPE price check of `$42.7015`, that stake is roughly **$21.35M** before oracle, data, market-maker, audit, legal, and operating costs.
+HIP-3 turns that exchange infrastructure into open market-operator infrastructure. Any qualified builder can deploy a perp DEX, but the blocker is severe: Hyperliquid docs specify a **500,000 HYPE mainnet staking requirement** for one HIP-3 perp DEX. Using the 2026-05-17 Hyperliquid API HYPE price check of `$42.848`, that stake is roughly **$21.42M** before oracle, data, market-maker, audit, legal, and operating costs.
 
 At the same time, ordinary HYPE staking is low-yield by comparison. Current liquid-staking references put HYPE staking around **2.37% APY**. HIP.markets is therefore not trying to replace staking with "free yield." It creates a different, higher-risk category: HYPE holders can back a market operator and share net deployer fees from markets they help enable.
 
@@ -102,6 +102,10 @@ The demo opens directly into the operator vault, not a marketing landing page. I
 
 ![HIP.markets demo dashboard](presentation/demo-dashboard.png)
 
+### Proof Console And Beta Readiness
+
+The app now includes a proof console that separates what is live, what is simulated, and what must be proven before deposits: deployed addresses, fee-recipient verification, first-three-market readiness, beta HYPE commitments, and remaining launch blockers.
+
 ### Brand And Mascot
 
 HIP.markets now has an original terminal-native brand system and a cat mascot, **HIP Cat**, positioned as the risk sentinel for the operator vault. The mascot nods to Hyperliquid's cat culture without copying Hyperliquid's marks or Hypurr assets.
@@ -155,6 +159,9 @@ The opportunity is not "stake HYPE and forget it." The opportunity is to build a
 - [Enhancement Prompt](docs/ENHANCEMENT_PROMPT.md)
 - [Judging Guide](docs/JUDGING_GUIDE.md)
 - [Deployment and Security Plan](docs/DEPLOYMENT_AND_SECURITY_PLAN.md)
+- [Deployment Proof Checklist](docs/DEPLOYMENT_PROOF_CHECKLIST.md)
+- [First Three Markets Memo](docs/FIRST_THREE_MARKETS_MEMO.md)
+- [Hyperliquid Demand Research](docs/HYPERLIQUID_DEMAND_RESEARCH.md)
 - [Market Context](docs/MARKET_CONTEXT.md)
 - [Jeff Yan-Inspired Review](docs/JEFF_YAN_REVIEW.md)
 - [Investor Critical Review And Execution Plan](docs/INVESTOR_CRITICAL_REVIEW_AND_EXECUTION_PLAN.md)

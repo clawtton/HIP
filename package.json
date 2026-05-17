@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "node tests/economic-model.test.js",
+    "test:solidity": "forge test",
     "validate": "node scripts/validate-submission.js",
     "build:deck": "python3 scripts/build-pptx.py",
     "build:walkthrough": "python3 scripts/build-walkthrough-video.py",

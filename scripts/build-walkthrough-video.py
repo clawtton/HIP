@@ -38,15 +38,15 @@ SCENES = [
         "kicker": "Hyperliquid is already exchange-scale",
         "image": "market-context.png",
         "bullets": [
-            "$307B 30-day perp volume reference",
-            "$13B open interest reference",
+            "$164B 30-day perp volume snapshot",
+            "$7.3B open interest snapshot",
             "HIP-3 opens these rails to new operators",
         ],
         "narration": (
             "Judges should not evaluate this like a cold-start yield app. Hyperliquid already has "
             "exchange-scale flow. The current research snapshot shows hundreds of billions in "
-            "monthly perp volume, more than thirteen billion dollars of open interest, and over a "
-            "billion dollars of annualized revenue. HIP-3 turns that infrastructure into open market "
+            "monthly perp volume, more than seven billion dollars of open interest, and over seven "
+            "hundred million dollars of annualized revenue. HIP-3 turns that infrastructure into open market "
             "operator infrastructure."
         ),
     },
@@ -55,7 +55,7 @@ SCENES = [
         "kicker": "Permissionless does not mean cheap",
         "stats": [
             ("Required HIP-3 stake", "500,000 HYPE"),
-            ("Value at $42.7015", "$21.35M"),
+            ("Value at $42.848", "$21.42M"),
             ("Baseline staking", "~2.37% APY"),
         ],
         "bullets": [
@@ -66,7 +66,7 @@ SCENES = [
         "narration": (
             "The opportunity is blocked by capital. One HIP-3 perpetual DEX requires five hundred "
             "thousand HYPE staked on mainnet. At the price check used in this submission, that is "
-            "roughly twenty one point three five million dollars before oracle operations, data, "
+            "roughly twenty one point four two million dollars before oracle operations, data, "
             "market maker incentives, audits, legal work, and reserves. Meanwhile current HYPE "
             "staking references are around two point three seven percent APY. HIP dot markets creates "
             "a separate, higher risk operator-fee product."

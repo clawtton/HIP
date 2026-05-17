@@ -1,0 +1,40 @@
+{
+  "network": {
+    "name": "HyperEVM",
+    "chainId": "TBD",
+    "rpcUrl": "TBD",
+    "explorerUrl": "TBD"
+  },
+  "contracts": {
+    "stakeAsset": "0x0000000000000000000000000000000000000000",
+    "rewardAsset": "0x0000000000000000000000000000000000000000",
+    "hipMarketsVault": "0x0000000000000000000000000000000000000000",
+    "hipMarketsRegistry": "0x0000000000000000000000000000000000000000",
+    "deployerStakeController": "0x0000000000000000000000000000000000000000"
+  },
+  "roles": {
+    "protocolMultisig": "0x0000000000000000000000000000000000000000",
+    "operator": "0x0000000000000000000000000000000000000000",
+    "riskCouncil": "0x0000000000000000000000000000000000000000",
+    "oracleReporter": "0x0000000000000000000000000000000000000000",
+    "feeReporter": "0x0000000000000000000000000000000000000000",
+    "hip3Deployer": "0x0000000000000000000000000000000000000000",
+    "oracleUpdater": "0x0000000000000000000000000000000000000000",
+    "feeRecipient": "0x0000000000000000000000000000000000000000"
+  },
+  "proofs": {
+    "vaultDeploymentTx": "TBD",
+    "registryDeploymentTx": "TBD",
+    "firstDepositTx": "TBD",
+    "withdrawalQueueTx": "TBD",
+    "withdrawalFinalizeTx": "TBD",
+    "firstRewardDistributionTx": "TBD",
+    "feeRecipientVerification": "TBD",
+    "hip3StakeSubmissionEvidence": "TBD"
+  },
+  "status": {
+    "productionDepositsEnabled": false,
+    "marketsLive": false,
+    "lastUpdated": "TBD"
+  }
+}

@@ -6,10 +6,14 @@ const required = [
   "app/index.html",
   "contracts/HipMarketsVault.sol",
   "contracts/HipMarketsRegistry.sol",
+  "foundry.toml",
   "docs/BUSINESS_PRODUCT_SPEC.md",
   "docs/ARCHITECTURE.md",
   "docs/BRAND_SYSTEM.md",
   "docs/DEPLOYMENT_AND_SECURITY_PLAN.md",
+  "docs/DEPLOYMENT_PROOF_CHECKLIST.md",
+  "docs/FIRST_THREE_MARKETS_MEMO.md",
+  "docs/HYPERLIQUID_DEMAND_RESEARCH.md",
   "docs/ORACLE_OPERATIONS.md",
   "docs/RISK_REGISTER.md",
   "docs/UI_UX_RESEARCH.md",
@@ -23,6 +27,8 @@ const required = [
   "app/assets/hip-markets-logo.svg",
   "app/assets/hip-cat.svg",
   "app/assets/favicon.svg",
+  "data/deployment-manifest.example.json",
+  "data/hyperliquid-demand-snapshot.json",
   "presentation/brand-system.html",
   "presentation/brand-system.png",
   "presentation/market-context.html",
@@ -36,6 +42,8 @@ const required = [
   "presentation/walkthrough/preview-frame.png",
   "scripts/build-walkthrough-video.py",
   "src/model.js",
+  "test/HipMarketsRegistry.t.sol",
+  "test/HipMarketsVault.t.sol",
   "tests/economic-model.test.js"
 ];
 

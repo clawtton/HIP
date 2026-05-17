@@ -90,7 +90,7 @@ Implementation response:
 
 ## Implemented In This Pass
 
-- Added a judge-friendly README section explaining Hyperliquid scale, the $21.35M stake blocker, low baseline HYPE staking APY, and the operator-fee incentive gap.
+- Added a judge-friendly README section explaining Hyperliquid scale, the $21.42M stake blocker, low baseline HYPE staking APY, and the operator-fee incentive gap.
 - Added `MARKET_CONTEXT.md` as the source-backed market narrative for judges and investors.
 - Added a new presentation visual, `market-context.png`, and inserted it into both the README and PPT source.
 - Expanded the deck with slides for Hyperliquid scale, the 500k HYPE blocker, HYPE holder motivation, operator-fee opacity, and this product critique.

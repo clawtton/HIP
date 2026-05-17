@@ -10,9 +10,9 @@ Users deposit HYPE, receive vault shares, and help fund the 500,000 HYPE slashab
 
 ## Why This Is A Real Problem
 
-Hyperliquid is already exchange-scale. The latest research snapshot used in this repo cites roughly $307B of 30-day perp volume, $15.6B of 24-hour perp volume, $13.3B of open interest, and $1.1B of annualized revenue on DefiLlama.
+Hyperliquid is already exchange-scale. The latest research snapshot used in this repo cites roughly $164B of 30-day perp volume, $1.33B of 24-hour perp volume, $7.3B of open interest, and $701M of annualized revenue on DefiLlama.
 
-HIP-3 opens those rails to new market operators, but the minimum stake is 500,000 HYPE. At the 2026-05-17 API price check of $42.7015, that is about $21.35M before oracle, data, market-maker, audit, legal, and incident-response costs. That is too large for many strong operators and too inaccessible for most HYPE holders.
+HIP-3 opens those rails to new market operators, but the minimum stake is 500,000 HYPE. At the 2026-05-17 API price check of $42.848, that is about $21.42M before oracle, data, market-maker, audit, legal, and incident-response costs. That is too large for many strong operators and too inaccessible for most HYPE holders.
 
 The standard operator model also leaves a community-alignment gap: deployer fees accrue to the operator fee recipient, while HYPE holders mostly receive ordinary staking yield, currently referenced around 2.37% APY. HIP.markets makes the community the operator stake base and shares net deployer fees back to the people who funded the stake.
 

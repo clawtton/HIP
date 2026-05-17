@@ -20,6 +20,7 @@
         <a href="#vault">Vault</a>
         <a href="#markets">Markets</a>
         <a href="#contracts">Contracts</a>
+        <a href="#proof">Proof</a>
         <a href="#risk">Risk</a>
         <a href="#walkthrough">Walkthrough</a>
       </nav>
@@ -40,7 +41,7 @@
             <strong>hipm:HYPE</strong>
             <small>Crypto major</small>
           </span>
-          <em>42.27</em>
+          <em>42.848</em>
         </button>
         <button class="market-row" data-market="BTC">
           <span>
@@ -106,13 +107,13 @@
         <section class="context-strip" aria-label="Market context">
           <article>
             <span>Hyperliquid proof</span>
-            <strong>$307B</strong>
-            <small>30d perp volume reference</small>
+            <strong>$164B</strong>
+            <small>30d perp volume snapshot</small>
           </article>
           <article>
             <span>Capital blocker</span>
-            <strong>$21.35M</strong>
-            <small>500k HYPE at $42.7015</small>
+            <strong>$21.42M</strong>
+            <small>500k HYPE at $42.848</small>
           </article>
           <article>
             <span>Staking baseline</span>
@@ -192,7 +193,7 @@
               <div style="height: 93%"></div>
             </div>
             <div class="model-form" id="model-form">
-              <label>HYPE price<input id="hypePrice" type="number" min="1" step="0.01" value="42.27" /></label>
+              <label>HYPE price<input id="hypePrice" type="number" min="1" step="0.01" value="42.848" /></label>
               <label>Staked HYPE<input id="stakedHype" type="number" min="1" step="1000" value="500000" /></label>
               <label>Daily volume<input id="dailyVolume" type="number" min="0" step="1000000" value="50000000" /></label>
               <label>Fee bps<input id="effectiveFeeBps" type="number" min="0" step="0.1" value="6" /></label>
@@ -257,6 +258,51 @@
             <div><span>User</span><strong>deposit(HYPE)</strong><small>Vault mints vHIPM shares</small></div>
             <div><span>Multisig</span><strong>Escrow stake</strong><small>Moves funded HYPE toward HIP-3 deployer stake</small></div>
             <div><span>Risk council</span><strong>Approve operator</strong><small>Marks slashable HIP-3 operator approval</small></div>
+          </div>
+        </section>
+
+        <section class="proof-console" id="proof" aria-label="Proof console">
+          <div class="panel-head">
+            <div>
+              <span>Proof console</span>
+              <strong>What must become real before deposits</strong>
+            </div>
+            <span class="pill warn">Pre-beta</span>
+          </div>
+          <div class="proof-grid">
+            <article>
+              <span>Deployment proof</span>
+              <strong>0 / 8</strong>
+              <small>Vault, registry, stake asset, roles, and fee recipient still need deployed addresses.</small>
+            </article>
+            <article>
+              <span>Beta demand</span>
+              <strong>$10M target</strong>
+              <small>Collect non-binding HYPE allocation interest before opening deposits.</small>
+            </article>
+            <article>
+              <span>Market readiness</span>
+              <strong>3 memos</strong>
+              <small>HYPE, BTC, and GOLD require oracle, maker, risk-limit, and kill-criteria signoff.</small>
+            </article>
+            <article>
+              <span>Fee verification</span>
+              <strong>Pending</strong>
+              <small>Fee-recipient proof and epoch reports must be public before distributions.</small>
+            </article>
+          </div>
+          <div class="proof-actions">
+            <a class="proof-link" href="../docs/DEPLOYMENT_PROOF_CHECKLIST.md">Deployment Checklist</a>
+            <a class="proof-link" href="../docs/FIRST_THREE_MARKETS_MEMO.md">Market Memo</a>
+            <a class="proof-link" href="../docs/HYPERLIQUID_DEMAND_RESEARCH.md">Demand Research</a>
+          </div>
+          <div class="beta-cta" aria-label="Beta commitment request">
+            <div>
+              <span>Beta commitment CTA</span>
+              <strong>Soft-circle HYPE before the vault opens.</strong>
+              <small>Target depositors should indicate intended HYPE range, lockup tolerance, preferred reward asset, and risk-governance interest. This prototype keeps the CTA static and does not collect data.</small>
+            </div>
+            <button class="ghost-action small" type="button">Request Beta Terms</button>
           </div>
         </section>
 

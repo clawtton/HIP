@@ -1,0 +1,69 @@
+{
+  "asOf": "2026-05-17",
+  "sources": [
+    {
+      "name": "DefiLlama Hyperliquid Perps",
+      "url": "https://defillama.com/protocol/hyperliquid-perps?denomination=HYPE&groupBy=cumulative"
+    },
+    {
+      "name": "Hyperliquid API allMids",
+      "url": "https://api.hyperliquid.xyz/info"
+    },
+    {
+      "name": "Hyperliquid HIP-3 docs",
+      "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-3-builder-deployed-perpetuals"
+    },
+    {
+      "name": "Hyperliquid Guide liquid staking reference",
+      "url": "https://hyperliquidguide.com/ecosystem/liquid-staking-guide"
+    },
+    {
+      "name": "PerpFinder Hyperliquid stats",
+      "url": "https://perpfinder.com/perps/hyperliquid"
+    }
+  ],
+  "defillama": {
+    "feesAnnualizedUsd": 775710000,
+    "fees30dUsd": 63580000,
+    "fees7dUsd": 10040000,
+    "fees24hUsd": 574848,
+    "revenueAnnualizedUsd": 701110000,
+    "revenue30dUsd": 57470000,
+    "holdersRevenueAnnualizedUsd": 694100000,
+    "holdersRevenue30dUsd": 56890000,
+    "perpVolume30dUsd": 164180000000,
+    "perpVolume7dUsd": 26557000000,
+    "perpVolume24hUsd": 1330000000,
+    "cumulativePerpVolumeUsd": 3531000000000,
+    "openInterestUsd": 7304000000
+  },
+  "hyperliquidApi": {
+    "hypeMidUsd": 42.848,
+    "btcMidUsd": 78073.5,
+    "ethMidUsd": 2186.75,
+    "paxgMidUsd": 4529.85
+  },
+  "hip3": {
+    "requiredStakeHype": 500000,
+    "requiredStakeUsdAtSnapshot": 21424000,
+    "deployerFeeShare": 0.5,
+    "firstThreeMarketsFree": true
+  },
+  "stakingBaseline": {
+    "nativeOrLiquidStakingApyReference": 0.0237,
+    "unstakingReferenceDays": 7
+  },
+  "perpfinderContext": {
+    "tradingPairsReference": "150+",
+    "maxLeverageReference": "50x",
+    "makerFeeReferenceBps": 1.5,
+    "takerFeeReferenceBps": 4.5,
+    "reportedMarketShareContext": "PerpFinder describes Hyperliquid as maintaining more than 70% of tracked on-chain perp volume for over twelve months and a large lead over the next DEX on the referenced review date."
+  },
+  "hipMarketsImplications": [
+    "The market is already large enough for operator economics to matter.",
+    "The 500k HYPE requirement is a quality filter and a roughly $21.42M capital blocker at the snapshot price.",
+    "Baseline HYPE staking references around 2.37% APY leave room for higher-risk operator-fee products.",
+    "A capped beta should target HYPE holders who understand slashing and can underwrite exchange-operator risk."
+  ]
+}

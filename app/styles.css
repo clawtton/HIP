@@ -222,6 +222,7 @@ nav a:hover,
 .bottom-panel,
 .operator-flow,
 .contract-panel,
+.proof-console,
 .risk-rail .panel-head,
 .health-stack > div,
 .runbook,
@@ -341,7 +342,8 @@ article strong {
 .ticket,
 .bottom-panel,
 .operator-flow,
-.contract-panel {
+.contract-panel,
+.proof-console {
   padding: 14px;
 }
 
@@ -554,6 +556,75 @@ input {
 
 .contract-panel {
   margin-top: 14px;
+}
+
+.proof-console {
+  margin-top: 14px;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.proof-grid article {
+  min-height: 132px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-3);
+  padding: 12px;
+}
+
+.proof-grid small,
+.beta-cta small {
+  display: block;
+  line-height: 1.45;
+}
+
+.proof-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.proof-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--text);
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.proof-link:hover {
+  border-color: rgba(50, 210, 150, 0.55);
+}
+
+.beta-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 12px;
+  border: 1px solid rgba(244, 196, 95, 0.35);
+  border-radius: 8px;
+  background: rgba(244, 196, 95, 0.06);
+  padding: 12px;
+}
+
+.beta-cta strong,
+.beta-cta span {
+  display: block;
+}
+
+.beta-cta strong {
+  margin: 4px 0;
+  font-size: 16px;
 }
 
 .contract-grid {
@@ -790,6 +861,7 @@ footer {
   }
 
   .kpi-grid,
+  .proof-grid,
   .walk-grid,
   .model-form,
   .flow-steps,
@@ -817,6 +889,7 @@ footer {
   }
 
   .kpi-grid,
+  .proof-grid,
   .walk-grid,
   .model-form,
   .flow-steps,
@@ -826,6 +899,11 @@ footer {
   }
 
   .contract-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .beta-cta {
     align-items: stretch;
     flex-direction: column;
   }

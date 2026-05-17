@@ -1,7 +1,7 @@
 [
   {
     "name": "Base MVP",
-    "hypePrice": 42.27,
+    "hypePrice": 42.848,
     "stakedHype": 500000,
     "dailyVolume": 50000000,
     "effectiveFeeBps": 6,
@@ -12,7 +12,7 @@
   },
   {
     "name": "Conservative launch",
-    "hypePrice": 42.27,
+    "hypePrice": 42.848,
     "stakedHype": 500000,
     "dailyVolume": 10000000,
     "effectiveFeeBps": 4,
@@ -23,7 +23,7 @@
   },
   {
     "name": "Growth mode heavy",
-    "hypePrice": 42.27,
+    "hypePrice": 42.848,
     "stakedHype": 500000,
     "dailyVolume": 100000000,
     "effectiveFeeBps": 1,
@@ -34,7 +34,7 @@
   },
   {
     "name": "Low deployer fee scale",
-    "hypePrice": 42.27,
+    "hypePrice": 42.848,
     "stakedHype": 500000,
     "dailyVolume": 50000000,
     "effectiveFeeBps": 6,

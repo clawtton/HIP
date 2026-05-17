@@ -14,7 +14,7 @@ const CLAIM_REWARDS_SELECTOR = "0x372500ab";
 
 const presets = {
   base: {
-    hypePrice: 42.27,
+    hypePrice: 42.848,
     stakedHype: 500000,
     dailyVolume: 50000000,
     effectiveFeeBps: 6,
@@ -24,7 +24,7 @@ const presets = {
     reserveShare: 10
   },
   conservative: {
-    hypePrice: 42.27,
+    hypePrice: 42.848,
     stakedHype: 500000,
     dailyVolume: 10000000,
     effectiveFeeBps: 4,
@@ -34,7 +34,7 @@ const presets = {
     reserveShare: 15
   },
   growth: {
-    hypePrice: 42.27,
+    hypePrice: 42.848,
     stakedHype: 500000,
     dailyVolume: 100000000,
     effectiveFeeBps: 1,
@@ -44,7 +44,7 @@ const presets = {
     reserveShare: 10
   },
   lowShare: {
-    hypePrice: 42.27,
+    hypePrice: 42.848,
     stakedHype: 500000,
     dailyVolume: 50000000,
     effectiveFeeBps: 6,

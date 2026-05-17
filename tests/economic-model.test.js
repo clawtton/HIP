@@ -6,7 +6,7 @@ import {
 } from "../src/model.js";
 
 const base = {
-  hypePrice: 42.27,
+  hypePrice: 42.848,
   stakedHype: 500_000,
   dailyVolume: 50_000_000,
   effectiveFeeBps: 6,
@@ -18,7 +18,7 @@ const base = {
 
 const economics = calculateVaultEconomics(base);
 
-assert.equal(Math.round(economics.stakeUsd), 21_135_000);
+assert.equal(Math.round(economics.stakeUsd), 21_424_000);
 assert.equal(Math.round(economics.grossTradingFees), 30_000);
 assert.equal(Math.round(economics.grossBuilderFees), 15_000);
 assert.equal(Math.round(economics.netDailyRewards), 9_000);

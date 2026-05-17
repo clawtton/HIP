@@ -6,11 +6,11 @@ This is HIP dot markets, a community-backed HIP-3 market operator for Hyperliqui
 
 ## 2. Why This Matters
 
-Judges should not evaluate this like a cold-start yield app. Hyperliquid already has exchange-scale flow. The current research snapshot shows hundreds of billions in monthly perp volume, more than thirteen billion dollars of open interest, and over a billion dollars of annualized revenue. HIP-3 turns that infrastructure into open market operator infrastructure.
+Judges should not evaluate this like a cold-start yield app. Hyperliquid already has exchange-scale flow. The current research snapshot shows hundreds of billions in monthly perp volume, more than seven billion dollars of open interest, and over seven hundred million dollars of annualized revenue. HIP-3 turns that infrastructure into open market operator infrastructure.
 
 ## 3. The 500k HYPE Blocker
 
-The opportunity is blocked by capital. One HIP-3 perpetual DEX requires five hundred thousand HYPE staked on mainnet. At the price check used in this submission, that is roughly twenty one point three five million dollars before oracle operations, data, market maker incentives, audits, legal work, and reserves. Meanwhile current HYPE staking references are around two point three seven percent APY. HIP dot markets creates a separate, higher risk operator-fee product.
+The opportunity is blocked by capital. One HIP-3 perpetual DEX requires five hundred thousand HYPE staked on mainnet. At the price check used in this submission, that is roughly twenty one point four two million dollars before oracle operations, data, market maker incentives, audits, legal work, and reserves. Meanwhile current HYPE staking references are around two point three seven percent APY. HIP dot markets creates a separate, higher risk operator-fee product.
 
 ## 4. Trade.xyz Proves Demand
 

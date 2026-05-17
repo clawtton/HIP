@@ -29,7 +29,7 @@ SLIDES = [
     {
         "title": "Hyperliquid Is Already Exchange-Scale",
         "bullets": [
-            "DefiLlama reference: $307.3B 30d perp volume, $15.6B 24h perp volume, and $13.3B open interest.",
+            "DefiLlama reference: $164.2B 30d perp volume, $1.33B 24h perp volume, and $7.3B open interest.",
             "HIP-3 builders are plugging into proven exchange-scale flow, not an empty ecosystem.",
             "The question is who can finance, operate, and risk-manage new markets.",
         ],
@@ -39,7 +39,7 @@ SLIDES = [
         "title": "The 500k HYPE Blocker",
         "bullets": [
             "HIP-3 mainnet requires 500,000 HYPE staked per perp DEX.",
-            "At $42.7015 HYPE, that is roughly $21.35M before oracle, maker, data, legal, audit, and incident costs.",
+            "At $42.848 HYPE, that is roughly $21.42M before oracle, maker, data, legal, audit, and incident costs.",
             "HIP.markets turns that blocker into a community-backed operator stake.",
         ],
     },
@@ -65,6 +65,15 @@ SLIDES = [
             "Do not look like a yield wrapper; look like an underwriting and operator business.",
             "Treat 500k HYPE as a quality filter, not a loophole.",
             "Reliability beats launch count: fewer markets, better oracles, clearer fee accounting.",
+        ],
+    },
+    {
+        "title": "Proof Flywheel",
+        "bullets": [
+            "Capped HYPE commitments prove depositor demand.",
+            "First-three-market readiness proves operator judgment.",
+            "Oracle uptime and fee epochs prove reliability.",
+            "Net deployer fees prove economic value and attract more HYPE and maker depth.",
         ],
     },
     {

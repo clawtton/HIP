@@ -8,13 +8,12 @@ Hyperliquid is not an early toy exchange. As of the 2026-05-17 research pass, De
 
 | Metric | Value |
 | --- | ---: |
-| Total value locked | $6.486B |
-| 30d perp volume | $307.285B |
-| 24h perp volume | $15.63B |
-| Cumulative perp volume | $2.76T |
-| Open interest | $13.346B |
-| Annualized fees | $1.125B |
-| Annualized revenue | $1.106B |
+| 30d perp volume | $164.18B |
+| 24h perp volume | $1.33B |
+| Cumulative perp volume | $3.531T |
+| Open interest | $7.304B |
+| Annualized fees | $775.71M |
+| Annualized revenue | $701.11M |
 
 That matters because HIP-3 is not launching into an empty chain. It is launching into an exchange stack with real order flow, real trader behavior, and real fee revenue.
 
@@ -26,13 +25,13 @@ The opportunity is powerful: new builders can list markets for equities, commodi
 
 The catch is also powerful: mainnet HIP-3 currently requires **500,000 HYPE staked** to deploy one perp DEX.
 
-Using the live Hyperliquid API HYPE mid price of `$42.7015` on 2026-05-17:
+Using the live Hyperliquid API HYPE mid price of `$42.848` on 2026-05-17:
 
 ```text
-500,000 HYPE x $42.7015 = $21,350,750
+500,000 HYPE x $42.848 = $21,424,000
 ```
 
-That is a roughly **$21.35M capital requirement** before oracle infrastructure, data licensing, market-maker incentives, legal work, audits, dashboards, relayers, reserve capital, or operations.
+That is a roughly **$21.42M capital requirement** before oracle infrastructure, data licensing, market-maker incentives, legal work, audits, dashboards, relayers, reserve capital, or operations.
 
 ## 3. Current HYPE Staking Yield Is Low
 
@@ -77,7 +76,7 @@ That loop is the core of HIP.markets.
 
 ## Sources
 
-- DefiLlama Hyperliquid perps page, accessed 2026-05-17: https://defillama.com/protocol/hyperliquid/perps
+- DefiLlama Hyperliquid perps page, accessed 2026-05-17: https://defillama.com/protocol/hyperliquid-perps?denomination=HYPE&groupBy=cumulative
 - Hyperliquid HIP-3 docs: https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-3-builder-deployed-perpetuals
 - Hyperliquid staking docs: https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/staking
 - Hyperliquid Guide liquid staking reference, accessed 2026-05-17: https://hyperliquidguide.com/ecosystem/liquid-staking-guide
