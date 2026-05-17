@@ -6,19 +6,24 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "presentation" / "HIP_MARKETS_DECK.pptx"
 
 SLIDES = [
-    ("HIP.markets", ["Community-backed HIP-3 markets on Hyperliquid.", "Pool HYPE. Launch markets. Share builder fees."]),
-    ("The Problem", ["HIP-3 DEXs need 500,000 HYPE staked.", "Builders need capital. HYPE holders need transparent market-growth yield.", "Oracle and slashing risks are hard to price."]),
-    ("The Insight", ["The 500,000 HYPE stake is the security layer for a market operator.", "If HYPE holders fund that stake, they should share in builder fees."]),
-    ("Product", ["HIP.markets is both a HyperEVM HYPE vault and a HIP-3 operator.", "Deposits back the HIP.markets deployer stake.", "Net deployer fees flow back to stakers."]),
-    ("System Flow", ["1. HYPE holders deposit into vault.", "2. Vault backs deployer stake.", "3. HIP.markets runs markets and oracles.", "4. Traders generate fees.", "5. Net fees distribute to stakers."]),
-    ("Why Not Liquid Staking?", ["Liquid staking earns validator-style yield.", "HIP.markets earns market-operator revenue.", "Risks: oracle, liquidity, slashing, market selection, fee shortfall."]),
-    ("MVP", ["One HIP.markets-operated DEX.", "One HYPE vault.", "First three tickers.", "Conservative caps.", "Weekly fee distributions.", "Public oracle and risk dashboard."]),
-    ("Economics", ["APR depends on volume, fee rate, deployer share, costs, reserves, and HYPE price.", "Base case: 500k HYPE, $50M daily volume, 6 bps fee, 50% deployer share.", "After 40% deductions: approximately 15% APR."]),
-    ("Risk Controls", ["Launch simple markets first.", "Use redundant oracle feeds.", "Cap open interest.", "Publish addresses.", "Maintain slashing reserve.", "Pause deposits during incidents."]),
-    ("Market Expansion", ["Phase 1: oracle-simple markets.", "Phase 2: liquid RWA markets.", "Phase 3: commodities and indices after licensing.", "Phase 4: HIP-4 outcome markets if mechanics mature."]),
-    ("Competitive Position", ["trade.xyz and HyENA prove HIP-3 operator demand.", "HIP.markets adds community-funded deployer stake plus fee sharing.", "At launch, HIP.markets is the operator."]),
-    ("Ask", ["HYPE holders for capped beta.", "Market makers for first markets.", "Oracle/data partners.", "Security reviewers.", "Hyperliquid ecosystem feedback."]),
-    ("Closing", ["HIP.markets turns HYPE holders into economic backers of new Hyperliquid markets.", "The first job is not maximizing APR.", "The first job is operating markets safely."]),
+    ("HIP.markets", ["Community-backed HIP-3 markets on Hyperliquid.", "Fund the market operator. Share the builder fees."]),
+    ("The Problem", ["HIP-3 DEXs need 500,000 HYPE staked.", "Stake is only the start: operators also need oracles, liquidity, risk controls, and fee accounting.", "Stakers need slashing risk beside APR."]),
+    ("Product Thesis", ["HIP.markets is not passive liquid staking.", "HIP.markets is the operator.", "Users back the HIP.markets deployer stake and share net deployer fees."]),
+    ("Why Trade.xyz Matters", ["trade.xyz proves HIP-3 can support serious market operators.", "Useful UI patterns: market rail, order ticket, positions tabs, account modes, Ghost Mode observability, explicit warnings."]),
+    ("UX Translation", ["Market rail -> first-three-market launch rail.", "Order ticket -> HYPE deposit ticket.", "Positions panel -> vault shares, fee history, oracle updates, market launches.", "Ghost Mode -> operator monitor."]),
+    ("Demo 1: Operator Vault", ["First screen is the usable operator console, not a landing page.", "Shows vault capacity, APR, oracle cadence, risk state, and 500k HYPE requirement."]),
+    ("Demo 2: Fee Model", ["Judges can change HYPE price, staked HYPE, daily volume, fee bps, builder share, operating fee, protocol fee, and reserve.", "APR updates instantly."]),
+    ("Demo 3: Deposit Ticket", ["Mirrors a trading order pane.", "Amount input, deposit/withdraw mode, fee summary, user rewards estimate, and slashing warning."]),
+    ("Demo 4: Audit Tabs", ["Vault shares show depositor state.", "Fee history shows how builder fees become distributions.", "Oracle updates and market launches expose operator readiness."]),
+    ("Demo 5: Operator Monitor", ["Right rail keeps operational risk visible.", "Fee recipient, oracle updater, slashing reserve, OI utilization, and incident runbook."]),
+    ("System Flow", ["1. HYPE holders deposit into vault.", "2. Vault backs HIP.markets deployer stake.", "3. HIP.markets launches first three HIP-3 markets.", "4. Traders generate fees.", "5. Net fees distribute to stakers."]),
+    ("Economics", ["Base model: 500k HYPE, $50M daily volume, 6 bps fee, 50% deployer share.", "After 40% operating/protocol/reserve deductions: approximately 15% net APR.", "Sensitivity matters more than headline APR."]),
+    ("Risk Controls", ["Start with oracle-simple markets.", "Avoid extra ticker auction costs at launch.", "Cap open interest, publish addresses, maintain reserve, pause deposits during incidents."]),
+    ("MVP", ["One HIP.markets-operated DEX.", "One HYPE vault.", "First three markets.", "Weekly distributions.", "Public dashboard.", "No third-party operator financing."]),
+    ("Roadmap", ["V1: prove operator vault and fee sharing.", "V2: more HIP.markets market vaults and automated fee verification.", "V3: risk tranching, secondary shares, HIP-4, possible third-party financing."]),
+    ("Competitive Position", ["trade.xyz and HyENA operate markets directly.", "HIP.markets also operates markets directly, but adds user-funded HYPE stake and transparent fee sharing.", "The wedge is making HYPE holders economic backers of the operator."]),
+    ("Ask", ["HYPE holders for capped beta.", "Market makers for first markets.", "Oracle and data partners.", "Security reviewers.", "Hyperliquid feedback on custody and fee routing."]),
+    ("Closing", ["HIP.markets turns builder-deployed markets into a community-backed operator business.", "The first job is operating markets safely."]),
 ]
 
 

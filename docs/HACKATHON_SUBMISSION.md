@@ -18,13 +18,23 @@ HIP.markets creates a HYPE vault on HyperEVM. Deposited HYPE backs the HIP.marke
 
 ## What We Built
 
-- Static demo for the vault and APR model.
+- Static demo for the vault, APR model, and HIP.markets operator console.
 - Economic model with tests.
 - Reference Solidity vault contract.
 - Reference registry contract for market and oracle transparency.
 - Business/product spec.
 - Architecture, oracle, and risk documentation.
 - Pitch deck.
+
+## UI/UX Enhancements
+
+The demo is inspired by trade.xyz's documented trading interface, but adapted to HIP.markets' operator-vault workflow:
+
+- market rail for first-three-market launch planning;
+- order-ticket-style HYPE deposit module;
+- summary rows for stake value, builder fees, net rewards, and user rewards;
+- positions-style tabs for vault shares, fee history, oracle updates, and market launches;
+- operator monitor that borrows the spirit of Ghost Mode observability by exposing operator state, fee recipient, oracle updater, reserve, OI utilization, and incident runbook.
 
 ## Technical Stack
 

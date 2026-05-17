@@ -6,81 +6,122 @@
 
 Community-backed HIP-3 markets on Hyperliquid.
 
-Pool HYPE. Launch markets. Share builder fees.
+Fund the market operator. Share the builder fees.
 
 ## Slide 2: The Problem
 
-HIP-3 lets builders launch custom perpetual DEXs, but one DEX requires 500,000 HYPE staked.
+HIP-3 gives builders the right to run custom perpetual DEXs, but one DEX requires 500,000 HYPE staked.
 
-That creates a bottleneck:
+That stake is not enough by itself:
 
-- builders need large HYPE backing;
-- HYPE holders want market-growth yield;
-- users need operator transparency;
-- oracle and slashing risks are hard to price.
+- builders still need oracle infrastructure;
+- market makers still need confidence;
+- users need clear fee accounting;
+- stakers need to see slashing risk beside APR.
 
-## Slide 3: The Insight
+## Slide 3: Product Thesis
 
-The 500,000 HYPE stake is not just a cost.
+HIP.markets is not passive liquid staking.
 
-It is the economic security layer for a market operator.
+HIP.markets is the operator.
 
-If HYPE holders fund that stake, they should share in the operator's builder fees.
+Users deposit HYPE to back the HIP.markets deployer stake. The HIP.markets team launches markets, runs oracles, manages risk, and shares net deployer fees with stakers.
 
-## Slide 4: Product
+## Slide 4: Why Trade.xyz Matters
 
-HIP.markets is both:
+trade.xyz proves that HIP-3 can support serious market operators.
 
-- a HyperEVM HYPE vault;
-- a HIP-3 market operator.
+We studied its documented UI patterns:
 
-Users deposit HYPE. HIP.markets uses it to satisfy the deployer stake requirement. HIP.markets runs markets and distributes net deployer fees to stakers.
+- dense market rail;
+- order ticket with clear execution summary;
+- positions panel with audit tabs;
+- account and market modes;
+- Ghost Mode-style observability;
+- explicit user warnings.
 
-## Slide 5: System Flow
+## Slide 5: UX Translation
 
-1. HYPE holders deposit into vault.
-2. Vault backs HIP.markets deployer stake.
-3. HIP.markets launches HIP-3 markets.
+HIP.markets adapts trading-terminal UX to an operator vault:
+
+- market rail becomes first-three-market launch rail;
+- order ticket becomes HYPE deposit ticket;
+- positions panel becomes vault shares, fee history, oracle updates, market launches;
+- Ghost Mode becomes operator monitor;
+- execution summary becomes fee and APR accounting.
+
+## Slide 6: Demo Screen 1 - Operator Vault
+
+The first screen is not a landing page.
+
+It is the usable operator console:
+
+- vault capacity;
+- projected APR;
+- oracle cadence;
+- risk state;
+- 500,000 HYPE stake requirement.
+
+## Slide 7: Demo Screen 2 - Fee Model
+
+Judges can change the core assumptions:
+
+- HYPE price;
+- HYPE staked;
+- daily volume;
+- effective fee bps;
+- builder share;
+- operating fee;
+- protocol fee;
+- reserve contribution.
+
+APR updates instantly.
+
+## Slide 8: Demo Screen 3 - Deposit Ticket
+
+The deposit ticket mirrors a trading order pane:
+
+- amount input;
+- deposit/withdraw mode;
+- stake value;
+- gross builder fees;
+- net rewards;
+- user-specific estimated rewards;
+- slashing warning.
+
+## Slide 9: Demo Screen 4 - Audit Tabs
+
+The bottom panel turns fee sharing into an inspectable ledger:
+
+- vault shares;
+- fee history;
+- oracle updates;
+- market launch readiness.
+
+This is where stakers verify that the operator is behaving.
+
+## Slide 10: Demo Screen 5 - Operator Monitor
+
+The right rail makes risk visible:
+
+- fee recipient;
+- oracle updater;
+- slashing reserve;
+- OI utilization;
+- incident runbook.
+
+Yield is never shown without operational risk beside it.
+
+## Slide 11: System Flow
+
+1. HYPE holders deposit into the HyperEVM vault.
+2. Vault backs the HIP.markets deployer stake.
+3. HIP.markets launches first three HIP-3 markets.
 4. Oracle relayers update prices.
 5. Traders generate fees.
-6. Net builder fees flow to stakers.
+6. Net deployer fees distribute to stakers.
 
-## Slide 6: Why Not Liquid Staking?
-
-Liquid staking earns validator-style yield.
-
-HIP.markets earns operator revenue from markets.
-
-The risks are different:
-
-- oracle risk;
-- liquidity risk;
-- slashing risk;
-- market selection risk;
-- fee-revenue risk.
-
-## Slide 7: MVP
-
-Start narrow:
-
-- one HIP.markets-operated DEX;
-- one HYPE vault;
-- first three tickers;
-- conservative caps;
-- weekly fee distributions;
-- public oracle and risk dashboard.
-
-## Slide 8: Economics
-
-Staker APR depends on:
-
-- daily trading volume;
-- effective fee rate;
-- deployer share;
-- operating costs;
-- protocol fee;
-- reserve contribution;
-- HYPE price.
+## Slide 12: Economics
 
 Base model:
 
@@ -88,53 +129,64 @@ Base model:
 - $50M daily volume;
 - 6 bps effective fee;
 - 50% deployer share;
-- 40% combined operating/protocol/reserve deductions;
-- approximately 15% APR.
+- 40% combined operating, protocol, and reserve deductions;
+- approximately 15% net APR.
 
-## Slide 9: Risk Controls
+Sensitivity matters more than headline APR.
+
+## Slide 13: Risk Controls
 
 HIP.markets wins by being conservative:
 
-- launch simple markets first;
-- use redundant oracle feeds;
+- start with oracle-simple markets;
+- avoid extra ticker auction costs at launch;
 - cap open interest;
-- publish fee recipient and deployer addresses;
+- publish fee recipient and oracle updater;
 - maintain slashing reserve;
 - pause deposits during oracle incidents.
 
-## Slide 10: Market Expansion
+## Slide 14: MVP
 
-Phase 1: crypto majors or other oracle-simple markets.
+The MVP is intentionally narrow:
 
-Phase 2: liquid RWA markets with strong data coverage.
+- one HIP.markets-operated DEX;
+- one HYPE vault;
+- first three markets;
+- weekly distributions;
+- public dashboard;
+- no third-party operator financing.
 
-Phase 3: commodities and indices after licensing and roll methodology.
+## Slide 15: Roadmap
 
-Phase 4: HIP-4 outcome markets if deployment and fee mechanics mature.
+V1: prove the operator vault and fee-sharing model.
 
-## Slide 11: Competitive Position
+V2: add more HIP.markets market vaults and automated fee verification.
 
-trade.xyz and HyENA prove HIP-3 operator demand.
+V3: add risk tranching, secondary vault shares, HIP-4 outcome markets, and possibly third-party operator financing.
 
-HIP.markets adds a different primitive:
+## Slide 16: Competitive Position
 
-community-funded deployer stake plus fee sharing.
+trade.xyz and HyENA operate markets directly.
 
-It is not a neutral allocator at launch. It is the operator.
+HIP.markets also operates markets directly, but adds user-funded HYPE stake and transparent fee sharing.
 
-## Slide 12: Ask
+The wedge is not more markets.
+
+The wedge is turning HYPE holders into economic backers of the market operator.
+
+## Slide 17: Ask
 
 We are looking for:
 
 - HYPE holders for capped beta;
 - market makers for first markets;
-- oracle/data partners;
+- oracle and data partners;
 - security reviewers;
-- Hyperliquid ecosystem feedback on fee routing and deployer custody.
+- Hyperliquid ecosystem feedback on deployer custody and fee routing.
 
-## Slide 13: Closing
+## Slide 18: Closing
 
-HIP.markets turns HYPE holders into economic backers of new Hyperliquid markets.
+HIP.markets turns builder-deployed markets into a community-backed operator business.
 
 The first job is not maximizing APR.
 

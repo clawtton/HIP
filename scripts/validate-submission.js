@@ -9,6 +9,7 @@ const required = [
   "docs/ARCHITECTURE.md",
   "docs/ORACLE_OPERATIONS.md",
   "docs/RISK_REGISTER.md",
+  "docs/UI_UX_RESEARCH.md",
   "docs/HACKATHON_SUBMISSION.md",
   "presentation/HIP_MARKETS_DECK.md",
   "presentation/HIP_MARKETS_DECK.pptx",

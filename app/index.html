@@ -7,143 +7,250 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="topbar">
-      <div>
-        <p class="eyebrow">HyperEVM x HIP-3</p>
-        <h1>HIP.markets</h1>
+    <header class="appbar">
+      <div class="brand">
+        <strong>HIP.markets</strong>
+        <span>Operator Vault</span>
       </div>
-      <a class="ghost" href="../docs/HACKATHON_SUBMISSION.md">Submission Notes</a>
+      <nav aria-label="Product sections">
+        <a href="#vault">Vault</a>
+        <a href="#markets">Markets</a>
+        <a href="#risk">Risk</a>
+        <a href="#walkthrough">Walkthrough</a>
+      </nav>
+      <div class="wallet">
+        <span class="status-dot"></span>
+        Demo Mode
+      </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Community-backed market operator</p>
-          <h2>Pool HYPE. Launch HIP-3 markets. Share builder fees.</h2>
-          <p>
-            HIP.markets uses deposited HYPE as the slashable stake for the HIP.markets team's own
-            builder-deployed perpetual DEX on Hyperliquid. Stakers receive a share of net deployer
-            fees while taking explicit operator, oracle, and slashing risk.
-          </p>
-          <div class="hero-actions">
-            <a href="#calculator" class="primary">Model Vault APR</a>
-            <a href="../docs/BUSINESS_PRODUCT_SPEC.md" class="secondary">Read Spec</a>
+    <main class="terminal-shell">
+      <aside class="market-rail" id="markets">
+        <div class="rail-heading">
+          <span>HIP-3 DEX</span>
+          <strong>hipm</strong>
+        </div>
+        <button class="market-row active" data-market="HYPE">
+          <span>
+            <strong>hipm:HYPE</strong>
+            <small>Crypto major</small>
+          </span>
+          <em>42.27</em>
+        </button>
+        <button class="market-row" data-market="BTC">
+          <span>
+            <strong>hipm:BTC</strong>
+            <small>Oracle-simple</small>
+          </span>
+          <em>78,145</em>
+        </button>
+        <button class="market-row" data-market="GOLD">
+          <span>
+            <strong>hipm:GOLD</strong>
+            <small>RWA candidate</small>
+          </span>
+          <em>4,533</em>
+        </button>
+        <div class="rail-note">
+          First three markets avoid extra HIP-3 ticker auction cost. Later listings require auction
+          participation and new oracle review.
+        </div>
+      </aside>
+
+      <section class="workspace" id="vault">
+        <div class="hero-strip">
+          <div>
+            <p class="eyebrow">Community-backed HIP-3 operator</p>
+            <h1>Fund the HIP.markets deployer stake, then track every fee and risk signal.</h1>
+          </div>
+          <div class="stake-card">
+            <span>Required stake</span>
+            <strong>500,000 HYPE</strong>
+            <small>Slashable HIP-3 security bond</small>
           </div>
         </div>
-        <div class="hero-panel" aria-label="HIP.markets operating loop">
-          <div class="loop-step">1. HYPE holders deposit</div>
-          <div class="loop-step">2. Vault backs HIP.markets deployer stake</div>
-          <div class="loop-step">3. HIP.markets runs markets and oracles</div>
-          <div class="loop-step">4. Net builder fees flow back to stakers</div>
-        </div>
-      </section>
 
-      <section class="metrics" aria-label="MVP assumptions">
-        <article>
-          <span>Required HIP-3 stake</span>
-          <strong>500,000 HYPE</strong>
-        </article>
-        <article>
-          <span>Initial market count</span>
-          <strong>3 tickers</strong>
-        </article>
-        <article>
-          <span>Launch posture</span>
-          <strong>Operator-first</strong>
-        </article>
-        <article>
-          <span>Risk model</span>
-          <strong>Slashable stake</strong>
-        </article>
-      </section>
-
-      <section id="calculator" class="calculator">
-        <div class="section-heading">
-          <p class="eyebrow">Economic model</p>
-          <h2>Estimate staker APR from builder fees</h2>
-          <p>
-            This model is intentionally transparent. It does not assume all deployer fees become
-            profit. Operating fees, protocol fees, and reserves are deducted first.
-          </p>
-        </div>
-
-        <form class="grid-form" id="model-form">
-          <label>
-            HYPE price
-            <input id="hypePrice" type="number" min="1" step="0.01" value="42.27" />
-          </label>
-          <label>
-            HYPE staked
-            <input id="stakedHype" type="number" min="1" step="1000" value="500000" />
-          </label>
-          <label>
-            Daily volume
-            <input id="dailyVolume" type="number" min="0" step="1000000" value="50000000" />
-          </label>
-          <label>
-            Effective fee bps
-            <input id="effectiveFeeBps" type="number" min="0" step="0.1" value="6" />
-          </label>
-          <label>
-            Deployer share
-            <input id="deployerShare" type="number" min="0" max="100" step="1" value="50" />
-          </label>
-          <label>
-            Operating fee
-            <input id="operatingFeeShare" type="number" min="0" max="100" step="1" value="20" />
-          </label>
-          <label>
-            Protocol fee
-            <input id="protocolFeeShare" type="number" min="0" max="100" step="1" value="10" />
-          </label>
-          <label>
-            Reserve contribution
-            <input id="reserveShare" type="number" min="0" max="100" step="1" value="10" />
-          </label>
-        </form>
-
-        <div class="results">
+        <section class="kpi-grid" aria-label="Vault metrics">
           <article>
-            <span>Stake value</span>
-            <strong id="stakeUsd">$0</strong>
+            <span>Vault capacity</span>
+            <strong>62%</strong>
+            <small>310,420 / 500,000 HYPE</small>
           </article>
           <article>
-            <span>Gross builder fees/day</span>
-            <strong id="grossBuilderFees">$0</strong>
-          </article>
-          <article>
-            <span>Net rewards/day</span>
-            <strong id="netDailyRewards">$0</strong>
-          </article>
-          <article class="highlight">
-            <span>Estimated APR</span>
+            <span>Projected APR</span>
             <strong id="apr">0.0%</strong>
+            <small>Net of operating fee and reserve</small>
           </article>
-        </div>
+          <article>
+            <span>Oracle cadence</span>
+            <strong>3.1s</strong>
+            <small class="good">Healthy</small>
+          </article>
+          <article>
+            <span>Risk state</span>
+            <strong>Green</strong>
+            <small>No deposits paused</small>
+          </article>
+        </section>
+
+        <section class="trade-grid">
+          <div class="chart-panel">
+            <div class="panel-head">
+              <div>
+                <span>hipm:HYPE</span>
+                <strong>Operator Economics</strong>
+              </div>
+              <div class="segmented" role="tablist" aria-label="Scenario presets">
+                <button class="active" data-preset="base">Base</button>
+                <button data-preset="conservative">Conservative</button>
+                <button data-preset="growth">Growth Mode</button>
+                <button data-preset="lowShare">Low Share</button>
+              </div>
+            </div>
+            <div class="curve" aria-label="Fee flow visualization">
+              <div style="height: 36%"></div>
+              <div style="height: 58%"></div>
+              <div style="height: 44%"></div>
+              <div style="height: 82%"></div>
+              <div style="height: 64%"></div>
+              <div style="height: 72%"></div>
+              <div style="height: 51%"></div>
+              <div style="height: 88%"></div>
+              <div style="height: 69%"></div>
+              <div style="height: 76%"></div>
+              <div style="height: 61%"></div>
+              <div style="height: 93%"></div>
+            </div>
+            <div class="model-form" id="model-form">
+              <label>HYPE price<input id="hypePrice" type="number" min="1" step="0.01" value="42.27" /></label>
+              <label>Staked HYPE<input id="stakedHype" type="number" min="1" step="1000" value="500000" /></label>
+              <label>Daily volume<input id="dailyVolume" type="number" min="0" step="1000000" value="50000000" /></label>
+              <label>Fee bps<input id="effectiveFeeBps" type="number" min="0" step="0.1" value="6" /></label>
+              <label>Builder share<input id="deployerShare" type="number" min="0" max="100" step="1" value="50" /></label>
+              <label>Ops fee<input id="operatingFeeShare" type="number" min="0" max="100" step="1" value="20" /></label>
+              <label>Protocol fee<input id="protocolFeeShare" type="number" min="0" max="100" step="1" value="10" /></label>
+              <label>Reserve<input id="reserveShare" type="number" min="0" max="100" step="1" value="10" /></label>
+            </div>
+          </div>
+
+          <aside class="ticket" aria-label="Deposit ticket">
+            <div class="panel-head compact">
+              <span>Vault Ticket</span>
+              <strong>Deposit HYPE</strong>
+            </div>
+            <div class="side-toggle" role="group" aria-label="Deposit or withdraw">
+              <button class="active">Deposit</button>
+              <button>Withdraw</button>
+            </div>
+            <label class="amount-label">
+              Amount
+              <div class="amount-input">
+                <input id="depositAmount" type="number" min="0" step="100" value="2500" />
+                <span>HYPE</span>
+              </div>
+            </label>
+            <div class="summary-list">
+              <div><span>Stake value</span><strong id="stakeUsd">$0</strong></div>
+              <div><span>Gross builder fees/day</span><strong id="grossBuilderFees">$0</strong></div>
+              <div><span>Net rewards/day</span><strong id="netDailyRewards">$0</strong></div>
+              <div><span>Your estimated rewards/day</span><strong id="userDailyRewards">$0</strong></div>
+            </div>
+            <button class="submit" type="button">Queue Deposit</button>
+            <p class="warning">
+              Deposits back the HIP.markets operator stake. Slashing losses can reduce principal.
+            </p>
+          </aside>
+        </section>
+
+        <section class="bottom-panel">
+          <div class="tabs" role="tablist" aria-label="Vault detail tabs">
+            <button class="active" data-tab="positions">Vault Shares</button>
+            <button data-tab="fees">Fee History</button>
+            <button data-tab="oracle">Oracle Updates</button>
+            <button data-tab="launch">Market Launches</button>
+          </div>
+          <div class="table-wrap" id="positions" data-panel>
+            <table>
+              <thead><tr><th>Account</th><th>Shares</th><th>Value</th><th>Pending rewards</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>0x71...9a2</td><td>42,000</td><td>$1.77M</td><td>$812</td><td><span class="pill good">Active</span></td></tr>
+                <tr><td>0x44...e10</td><td>18,500</td><td>$782K</td><td>$357</td><td><span class="pill good">Active</span></td></tr>
+                <tr><td>0xaa...412</td><td>7,200</td><td>$304K</td><td>$139</td><td><span class="pill warn">Queued</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-wrap hidden" id="fees" data-panel>
+            <table>
+              <thead><tr><th>Epoch</th><th>Volume</th><th>Builder fees</th><th>Reserve</th><th>Distributed</th></tr></thead>
+              <tbody>
+                <tr><td>Week 03</td><td>$348M</td><td>$104K</td><td>$10.4K</td><td>$62.6K</td></tr>
+                <tr><td>Week 02</td><td>$291M</td><td>$87K</td><td>$8.7K</td><td>$52.2K</td></tr>
+                <tr><td>Week 01</td><td>$144M</td><td>$43K</td><td>$4.3K</td><td>$25.8K</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-wrap hidden" id="oracle" data-panel>
+            <table>
+              <thead><tr><th>Market</th><th>Last update</th><th>Cadence</th><th>Deviation</th><th>State</th></tr></thead>
+              <tbody>
+                <tr><td>hipm:HYPE</td><td>2s ago</td><td>3.1s</td><td>4 bps</td><td><span class="pill good">Healthy</span></td></tr>
+                <tr><td>hipm:BTC</td><td>3s ago</td><td>3.0s</td><td>2 bps</td><td><span class="pill good">Healthy</span></td></tr>
+                <tr><td>hipm:GOLD</td><td>6s ago</td><td>3.4s</td><td>11 bps</td><td><span class="pill warn">Watch</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-wrap hidden" id="launch" data-panel>
+            <table>
+              <thead><tr><th>Stage</th><th>Requirement</th><th>Owner</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Stake</td><td>500k HYPE</td><td>Vault</td><td><span class="pill warn">Funding</span></td></tr>
+                <tr><td>Oracle</td><td>3s relayer + failover</td><td>Ops</td><td><span class="pill good">Designed</span></td></tr>
+                <tr><td>Liquidity</td><td>Two market makers</td><td>BD</td><td><span class="pill warn">Negotiating</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
       </section>
 
-      <section class="two-column">
-        <div>
-          <p class="eyebrow">MVP</p>
-          <h2>Launch with the first three markets</h2>
-          <p>
-            The first HIP.markets DEX should start with three oracle-simple, liquid markets to avoid
-            additional HIP-3 auction costs while proving fee routing, monitoring, and withdrawal logic.
-          </p>
+      <aside class="risk-rail" id="risk">
+        <div class="panel-head compact">
+          <span>Operator Monitor</span>
+          <strong>Green</strong>
         </div>
-        <ul class="checklist">
-          <li>One HIP.markets-operated HIP-3 DEX</li>
-          <li>One HYPE vault with conservative caps</li>
-          <li>Weekly fee distributions</li>
-          <li>Oracle health dashboard</li>
-          <li>Slashing reserve contribution</li>
-        </ul>
-      </section>
+        <div class="health-stack">
+          <div><span>Fee recipient</span><strong>0xhip...fees</strong></div>
+          <div><span>Oracle updater</span><strong>0xhip...orcl</strong></div>
+          <div><span>Slashing reserve</span><strong>$128K</strong></div>
+          <div><span>OI utilization</span><strong>31%</strong></div>
+        </div>
+        <div class="runbook">
+          <h2>Incident runbook</h2>
+          <ol>
+            <li>Pause new deposits.</li>
+            <li>Check oracle deviation.</li>
+            <li>Notify stakers and market makers.</li>
+            <li>Halt market if red state persists.</li>
+          </ol>
+        </div>
+      </aside>
     </main>
+
+    <section class="walkthrough" id="walkthrough">
+      <div class="walkthrough-inner">
+        <p class="eyebrow">Demo walkthrough</p>
+        <h2>Judge flow</h2>
+        <div class="walk-grid">
+          <article><strong>1</strong><span>Review vault capacity and APR before deposit.</span></article>
+          <article><strong>2</strong><span>Change volume, fee share, and reserve assumptions.</span></article>
+          <article><strong>3</strong><span>Inspect oracle health and market launch readiness.</span></article>
+          <article><strong>4</strong><span>Open fee history to see how builder fees are distributed.</span></article>
+        </div>
+      </div>
+    </section>
 
     <footer>
       <span>Hackathon prototype. Not audited. Not financial advice.</span>
-      <a href="https://github.com/clawtton/HIP">GitHub</a>
+      <a href="../presentation/HIP_MARKETS_DECK.md">Pitch Deck</a>
     </footer>
 
     <script type="module" src="./app.js"></script>

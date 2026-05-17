@@ -74,6 +74,7 @@ The opportunity is not "stake HYPE and forget it." The opportunity is to build a
 - [Technical Architecture](docs/ARCHITECTURE.md)
 - [Oracle Operations Plan](docs/ORACLE_OPERATIONS.md)
 - [Risk Register](docs/RISK_REGISTER.md)
+- [UI/UX Research Notes](docs/UI_UX_RESEARCH.md)
 - [Hackathon Submission Summary](docs/HACKATHON_SUBMISSION.md)
 - [Pitch Deck](presentation/HIP_MARKETS_DECK.md)
 
@@ -81,7 +82,7 @@ The opportunity is not "stake HYPE and forget it." The opportunity is to build a
 
 ### Frontend Demo
 
-The static demo in `app/` shows the core product surface:
+The static demo in `app/` shows a terminal-style operator vault interface inspired by trade.xyz's documented trading workflow:
 
 - HYPE stake requirement;
 - assumed HYPE price;
@@ -90,7 +91,12 @@ The static demo in `app/` shows the core product surface:
 - deployer share;
 - operating cost;
 - reserve contribution;
-- estimated distributable APR.
+- estimated distributable APR;
+- market launch rail;
+- deposit/withdraw ticket;
+- fee history tabs;
+- oracle health table;
+- operator risk monitor.
 
 ### Economic Model
 
