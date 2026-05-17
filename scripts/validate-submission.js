@@ -28,6 +28,12 @@ const required = [
   "presentation/market-context.png",
   "presentation/HIP_MARKETS_DECK.md",
   "presentation/HIP_MARKETS_DECK.pptx",
+  "presentation/walkthrough/HIP_MARKETS_WALKTHROUGH.mp4",
+  "presentation/walkthrough/HIP_MARKETS_WALKTHROUGH_SCRIPT.md",
+  "presentation/walkthrough/YOUTUBE_UPLOAD_COPY.md",
+  "presentation/walkthrough/manifest.json",
+  "presentation/walkthrough/preview-frame.png",
+  "scripts/build-walkthrough-video.py",
   "src/model.js",
   "tests/economic-model.test.js"
 ];

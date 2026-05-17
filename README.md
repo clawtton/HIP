@@ -72,6 +72,16 @@ You can also open `app/index.html` directly in a browser.
 
 ## Presentation Highlights
 
+### Walkthrough Video
+
+An upload-ready narrated hackathon walkthrough is included at [presentation/walkthrough/HIP_MARKETS_WALKTHROUGH.mp4](presentation/walkthrough/HIP_MARKETS_WALKTHROUGH.mp4). The narration script and YouTube upload copy are included in [presentation/walkthrough/HIP_MARKETS_WALKTHROUGH_SCRIPT.md](presentation/walkthrough/HIP_MARKETS_WALKTHROUGH_SCRIPT.md) and [presentation/walkthrough/YOUTUBE_UPLOAD_COPY.md](presentation/walkthrough/YOUTUBE_UPLOAD_COPY.md).
+
+To rebuild it locally:
+
+```bash
+npm run build:walkthrough
+```
+
 ### Trade.xyz Reference Economics
 
 Trade[XYZ] is used as the dated reference case for profit potential, not as a guaranteed HIP.markets base case. The snapshot below shows a public 30-day benchmark: `$2.50B` volume, `60` listed markets, `$121.98K` total fees, an estimated `$60.99K` deployer share before operating costs, and `3.47%` gross implied APR on the 500,000 HYPE minimum stake.
