@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trade.xyz Reference Economics</title>
+    <style>
+      :root {
+        --bg: #07090c;
+        --panel: #10151b;
+        --line: #26313c;
+        --text: #edf3f6;
+        --muted: #8d9ba7;
+        --green: #32d296;
+        --blue: #68a7ff;
+        --yellow: #f4c45f;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 1280px;
+        height: 720px;
+        margin: 0;
+        overflow: hidden;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+      }
+
+      .wrap {
+        position: relative;
+        height: 100%;
+        padding: 38px 44px 56px;
+      }
+
+      .eyebrow {
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 1120px;
+        margin: 8px 0 20px;
+        font-size: 42px;
+        line-height: 1.02;
+      }
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 22px;
+      }
+
+      .tag {
+        display: inline-block;
+        margin-left: 8px;
+        border: 1px solid rgba(50, 210, 150, 0.35);
+        border-radius: 999px;
+        padding: 4px 8px;
+        color: var(--green);
+        font-size: 12px;
+        vertical-align: middle;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 22px;
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+        padding: 20px;
+      }
+
+      .kpis {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+
+      .kpi {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 12px;
+      }
+
+      .kpi span,
+      .note,
+      .source {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .kpi strong {
+        display: block;
+        margin-top: 6px;
+        font-size: 24px;
+      }
+
+      .calc {
+        display: grid;
+        gap: 10px;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 1.45fr 0.75fr 0.95fr;
+        gap: 8px;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 9px 0;
+      }
+
+      .row b {
+        font-size: 20px;
+      }
+
+      .row em {
+        color: var(--muted);
+        font-size: 12px;
+        font-style: normal;
+      }
+
+      .green {
+        color: var(--green);
+      }
+
+      .yellow {
+        color: var(--yellow);
+      }
+
+      table {
+        width: 100%;
+        margin-top: 4px;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 8px 6px;
+        text-align: left;
+        font-size: 14px;
+      }
+
+      th {
+        color: var(--muted);
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .bar {
+        height: 8px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: #19222b;
+      }
+
+      .bar i {
+        display: block;
+        height: 100%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--green), var(--blue));
+      }
+
+      .note {
+        margin: 14px 0 0;
+        line-height: 1.45;
+      }
+
+      .source {
+        position: absolute;
+        right: 44px;
+        bottom: 24px;
+        left: 44px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="eyebrow">Reference benchmark, retrieved May 17, 2026</div>
+      <h1>Trade[XYZ] shows HIP-3 can generate real deployer fee flow <span class="tag">not a guarantee</span></h1>
+
+      <div class="grid">
+        <section class="panel">
+          <div class="kpis">
+            <div class="kpi"><span>30d volume</span><strong>$2.50B</strong></div>
+            <div class="kpi"><span>Markets</span><strong>60</strong></div>
+            <div class="kpi"><span>Traders</span><strong>18,382</strong></div>
+            <div class="kpi"><span>Total fees</span><strong>$121.98K</strong></div>
+          </div>
+
+          <div class="calc">
+            <div class="row"><span>Deployer fee share, HIP-3 feeScale 1.0</span><b>50%</b><em>Hyperliquid docs</em></div>
+            <div class="row"><span>Estimated deployer revenue, 30d</span><b class="green">$60.99K</b><em>before ops / reserves</em></div>
+            <div class="row"><span>Annualized gross deployer revenue</span><b class="green">$742.0K</b><em>$60.99K x 365 / 30</em></div>
+            <div class="row"><span>500k HYPE stake value @ $42.8085</span><b>$21.40M</b><em>protocol minimum</em></div>
+            <div class="row"><span>Implied gross vault APR on minimum stake</span><b class="yellow">3.47%</b><em>before HIP.markets deductions</em></div>
+            <div class="row"><span>Implied gross APR on Trade.xyz actual delegated stake</span><b>2.34%</b><em>739,741 HYPE</em></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Successful 30d tickers</h2>
+          <table>
+            <thead>
+              <tr><th>Rank</th><th>Symbol</th><th>30d volume</th><th>Relative</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>XYZ100</td><td>$443.91M</td><td><div class="bar"><i style="width:100%"></i></div></td></tr>
+              <tr><td>2</td><td>SP500</td><td>$443.48M</td><td><div class="bar"><i style="width:100%"></i></div></td></tr>
+              <tr><td>3</td><td>SILVER</td><td>$297.70M</td><td><div class="bar"><i style="width:67%"></i></div></td></tr>
+              <tr><td>4</td><td>CL</td><td>$282.52M</td><td><div class="bar"><i style="width:64%"></i></div></td></tr>
+              <tr><td>5</td><td>SNDK</td><td>$156.64M</td><td><div class="bar"><i style="width:35%"></i></div></td></tr>
+              <tr><td>6</td><td>MU</td><td>$133.54M</td><td><div class="bar"><i style="width:30%"></i></div></td></tr>
+              <tr><td>7</td><td>NVDA</td><td>$120.49M</td><td><div class="bar"><i style="width:27%"></i></div></td></tr>
+              <tr><td>8</td><td>BRENTOIL</td><td>$104.40M</td><td><div class="bar"><i style="width:24%"></i></div></td></tr>
+            </tbody>
+          </table>
+          <p class="note">Use this as a profit-potential reference, not as the HIP.markets base case. Actual vault yield depends on market selection, user tiers, growth mode, oracle costs, maker incentives, and reserve policy.</p>
+        </section>
+      </div>
+
+      <div class="source">Sources: Loris Trade[XYZ] analytics as of 2026-05-16; Hyperliquid HIP-3 docs; Hyperliquid API for HYPE price, deployerFeeScale, and delegated stake on 2026-05-17.</div>
+    </div>
+  </body>
+</html>
