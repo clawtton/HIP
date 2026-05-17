@@ -114,13 +114,29 @@ SLIDES = [
         "image": "demo-fee-ledger-view.png",
     },
     {
+        "title": "Demo: Contract Wiring",
+        "bullets": [
+            "Wallet-aware flow: connect wallet, configure vault/token addresses, approve HYPE, deposit, and claim rewards.",
+            "The UI also shows which actions still require operator multisig and risk-council execution.",
+        ],
+        "image": "demo-contract-wiring.png",
+    },
+    {
+        "title": "Contract Depth",
+        "bullets": [
+            "Vault now models vHIPM receipt shares, vault caps, withdrawal queues, reward accounting, and slash losses.",
+            "Operator lifecycle: funding, stake-ready, stake-escrowed, approved, live, wind-down, and slashed.",
+            "Registry tracks launch checklist, fee epochs, oracle health, market status, and risk state.",
+        ],
+    },
+    {
         "title": "System Flow",
         "bullets": [
             "1. HYPE holders deposit into the HyperEVM vault.",
             "2. Vault backs HIP.markets deployer stake.",
-            "3. HIP.markets launches the first three HIP-3 markets.",
-            "4. Traders generate fees.",
-            "5. Net fees distribute after operating, protocol, and reserve deductions.",
+            "3. Operator multisig escrows funded HYPE to the deployer stake controller.",
+            "4. Risk council records HIP-3 operator approval.",
+            "5. HIP.markets launches markets, traders generate fees, and net rewards distribute after deductions.",
         ],
     },
     {

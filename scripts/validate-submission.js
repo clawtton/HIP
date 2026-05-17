@@ -11,6 +11,7 @@ const required = [
   "docs/RISK_REGISTER.md",
   "docs/UI_UX_RESEARCH.md",
   "docs/HACKATHON_SUBMISSION.md",
+  "docs/POLISH_AUDIT.md",
   "presentation/HIP_MARKETS_DECK.md",
   "presentation/HIP_MARKETS_DECK.pptx",
   "src/model.js",

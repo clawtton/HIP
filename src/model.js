@@ -52,6 +52,34 @@ export function requiredDailyVolumeForApr(input) {
   return dailyTarget / ((effectiveFeeBps / 10_000) * deployerShare * netShare);
 }
 
+export function calculateOperatorReadiness(input) {
+  const requiredStake = positive(input.requiredStake, "requiredStake");
+  const fundedHype = nonNegative(input.fundedHype, "fundedHype");
+  const oracleReady = Boolean(input.oracleReady);
+  const makerReady = Boolean(input.makerReady);
+  const feeRecipientVerified = Boolean(input.feeRecipientVerified);
+  const emergencyPlanReady = Boolean(input.emergencyPlanReady);
+
+  const fundingProgress = Math.min(1, fundedHype / requiredStake);
+  const remainingHype = Math.max(0, requiredStake - fundedHype);
+  const checklist = [oracleReady, makerReady, feeRecipientVerified, emergencyPlanReady];
+  const checklistReady = checklist.filter(Boolean).length;
+  const readinessScore = (fundingProgress * 0.55) + ((checklistReady / checklist.length) * 0.45);
+
+  let phase = "Funding";
+  if (fundingProgress >= 1 && checklistReady < checklist.length) phase = "Stake Ready";
+  if (fundingProgress >= 1 && checklistReady === checklist.length) phase = "Ready For HIP-3 Stake";
+
+  return {
+    fundingProgress,
+    remainingHype,
+    checklistReady,
+    checklistTotal: checklist.length,
+    readinessScore,
+    phase
+  };
+}
+
 function positive(value, name) {
   const number = Number(value);
   if (!Number.isFinite(number) || number <= 0) {

@@ -34,18 +34,21 @@ flowchart LR
 Responsibilities:
 
 - accept HYPE deposits;
-- issue vault shares;
-- queue withdrawals;
-- record stake allocation;
-- record slash losses;
-- distribute rewards;
+- issue ERC-20-style vault receipt shares (`vHIPM`);
+- track proportional share price through deposits, withdrawals, reward distributions, and slash losses;
+- queue withdrawals with a fixed protocol delay;
+- model the operator lifecycle from funding to stake-ready, stake-escrowed, operator-approved, markets-live, wind-down, and slashed states;
+- escrow funded HYPE to a deployer stake controller once the 500,000 HYPE requirement is met;
+- record stake returns and slash losses;
+- distribute rewards after protocol-fee and slashing-reserve accounting;
 - pause deposits or withdrawals during incidents.
 
 MVP assumptions:
 
 - HYPE is represented by an ERC-20-compatible stake asset on HyperEVM or wrapped HYPE.
 - Reward asset may be USDC or HYPE.
-- Allocation to HyperCore may require an off-chain controller until full HyperEVM-to-HyperCore control is verified.
+- Allocation to HyperCore may require an off-chain controller or multisig until full HyperEVM-to-HyperCore control is verified.
+- `escrowStakeToController()` is therefore a reference handoff point, not proof that HyperCore HIP-3 staking can be fully contract-controlled today.
 
 ### HipMarketsRegistry
 
@@ -54,11 +57,29 @@ Responsibilities:
 - publish HIP.markets deployer address;
 - publish oracle updater address;
 - publish fee recipient;
+- publish vault and deployer stake requirement;
+- publish operator lifecycle status and risk state;
+- publish launch checklist completion;
 - publish market metadata;
 - publish oracle health;
+- publish fee epochs;
 - publish risk disclosures.
 
 The registry is meant to make the operating state auditable to users and judges.
+
+### HyperEVM App Connectivity
+
+The frontend now has a minimal EIP-1193 transaction path:
+
+1. User connects a wallet.
+2. User configures deployed vault, HYPE token, and target chain ID.
+3. User sends `approve(HYPE)` to the stake token.
+4. User sends `deposit(uint256)` to `HipMarketsVault`.
+5. Operator multisig calls `escrowStakeToController()` after the vault reaches 500,000 HYPE and the risk checklist is complete.
+6. Risk council records operator approval and markets-live status.
+7. Users can call `claimRewards()` after distributions are posted.
+
+This keeps the demo honest: deposits and claims can be user transactions once deployed, while HIP-3 stake submission and operator approval still require controlled operator execution until native delegated HIP-3 staking is validated.
 
 ## Off-Chain Services
 

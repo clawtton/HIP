@@ -15,13 +15,14 @@
       <nav aria-label="Product sections">
         <a href="#vault">Vault</a>
         <a href="#markets">Markets</a>
+        <a href="#contracts">Contracts</a>
         <a href="#risk">Risk</a>
         <a href="#walkthrough">Walkthrough</a>
       </nav>
-      <div class="wallet">
+      <button class="wallet" id="connectWallet" type="button">
         <span class="status-dot"></span>
-        Demo Mode
-      </div>
+        <span id="walletLabel">Connect Wallet</span>
+      </button>
     </header>
 
     <main class="terminal-shell">
@@ -73,8 +74,8 @@
         <section class="kpi-grid" aria-label="Vault metrics">
           <article>
             <span>Vault capacity</span>
-            <strong>62%</strong>
-            <small>310,420 / 500,000 HYPE</small>
+            <strong id="fundingProgress">62%</strong>
+            <small><span id="fundedHype">310,420</span> / 500,000 HYPE</small>
           </article>
           <article>
             <span>Projected APR</span>
@@ -91,6 +92,43 @@
             <strong>Green</strong>
             <small>No deposits paused</small>
           </article>
+        </section>
+
+        <section class="operator-flow" aria-label="Operator lifecycle">
+          <div class="panel-head">
+            <div>
+              <span>HIP-3 operator path</span>
+              <strong id="operatorPhase">Funding</strong>
+            </div>
+            <span class="pill warn" id="remainingStake">189,580 HYPE remaining</span>
+          </div>
+          <div class="flow-steps">
+            <article class="done">
+              <strong>1</strong>
+              <span>Vault deployed</span>
+              <small>HyperEVM receipt shares</small>
+            </article>
+            <article class="active">
+              <strong>2</strong>
+              <span>Collect HYPE</span>
+              <small>500k target stake</small>
+            </article>
+            <article>
+              <strong>3</strong>
+              <span>Escrow stake</span>
+              <small>Stake controller</small>
+            </article>
+            <article>
+              <strong>4</strong>
+              <span>HIP-3 approval</span>
+              <small>Slashable operator</small>
+            </article>
+            <article>
+              <strong>5</strong>
+              <span>Markets live</span>
+              <small>Fees to vault</small>
+            </article>
+          </div>
         </section>
 
         <section class="trade-grid">
@@ -156,10 +194,38 @@
               <div><span>Your estimated rewards/day</span><strong id="userDailyRewards">$0</strong></div>
             </div>
             <button class="submit" type="button">Queue Deposit</button>
+            <button class="ghost-action" id="contractDeposit" type="button">Approve + Deposit Onchain</button>
             <p class="warning">
               Deposits back the HIP.markets operator stake. Slashing losses can reduce principal.
             </p>
           </aside>
+        </section>
+
+        <section class="contract-panel" id="contracts" aria-label="Contract connectivity">
+          <div class="panel-head">
+            <div>
+              <span>Contract wiring</span>
+              <strong>HyperEVM transaction path</strong>
+            </div>
+            <span class="pill" id="contractMode">Demo addresses</span>
+          </div>
+          <div class="contract-grid">
+            <label>Vault contract<input id="vaultAddress" value="0x0000000000000000000000000000000000000000" /></label>
+            <label>HYPE token<input id="stakeTokenAddress" value="0x0000000000000000000000000000000000000000" /></label>
+            <label>Chain ID<input id="targetChainId" value="0x3e7" /></label>
+            <label>Wallet<input id="walletAccount" value="Not connected" readonly /></label>
+          </div>
+          <div class="contract-actions">
+            <button class="submit small" id="saveContractConfig" type="button">Save Config</button>
+            <button class="ghost-action small" id="claimRewards" type="button">Claim Rewards</button>
+            <span id="txStatus">Connect a wallet and configure deployed addresses to send transactions.</span>
+          </div>
+          <div class="tx-map" aria-label="Onchain transaction map">
+            <div><span>User</span><strong>approve(HYPE)</strong><small>Stake token allowance to vault</small></div>
+            <div><span>User</span><strong>deposit(HYPE)</strong><small>Vault mints vHIPM shares</small></div>
+            <div><span>Multisig</span><strong>Escrow stake</strong><small>Moves funded HYPE toward HIP-3 deployer stake</small></div>
+            <div><span>Risk council</span><strong>Approve operator</strong><small>Marks slashable HIP-3 operator approval</small></div>
+          </div>
         </section>
 
         <section class="bottom-panel">

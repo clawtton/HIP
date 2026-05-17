@@ -99,7 +99,8 @@ nav a,
   font-size: 13px;
 }
 
-nav a:hover {
+nav a:hover,
+.wallet:hover {
   border-color: var(--line);
   color: var(--text);
 }
@@ -108,6 +109,7 @@ nav a:hover {
   gap: 8px;
   margin-right: 14px;
   border-color: var(--line);
+  background: transparent;
 }
 
 .status-dot {
@@ -207,6 +209,8 @@ nav a:hover {
 .chart-panel,
 .ticket,
 .bottom-panel,
+.operator-flow,
+.contract-panel,
 .risk-rail .panel-head,
 .health-stack > div,
 .runbook,
@@ -265,7 +269,8 @@ h1 {
 }
 
 .kpi-grid article,
-.walk-grid article {
+.walk-grid article,
+.flow-steps article {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
@@ -295,8 +300,57 @@ article strong {
 
 .chart-panel,
 .ticket,
-.bottom-panel {
+.bottom-panel,
+.operator-flow,
+.contract-panel {
   padding: 14px;
+}
+
+.operator-flow {
+  margin-bottom: 14px;
+}
+
+.flow-steps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.flow-steps article {
+  position: relative;
+  min-height: 98px;
+}
+
+.flow-steps article.done,
+.flow-steps article.active {
+  border-color: rgba(50, 210, 150, 0.48);
+}
+
+.flow-steps article.active {
+  background: var(--green-soft);
+}
+
+.flow-steps strong {
+  display: inline-grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--panel-3);
+  color: var(--green);
+  font-size: 13px;
+}
+
+.flow-steps span {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.flow-steps small {
+  display: block;
+  margin-top: 4px;
 }
 
 .panel-head.compact {
@@ -425,6 +479,29 @@ input {
   font-weight: 800;
 }
 
+.submit.small,
+.ghost-action.small {
+  width: auto;
+  min-height: 34px;
+  margin-top: 0;
+  padding: 0 12px;
+}
+
+.ghost-action {
+  width: 100%;
+  min-height: 40px;
+  margin-top: 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.ghost-action:hover {
+  border-color: rgba(50, 210, 150, 0.55);
+}
+
 .warning {
   margin: 10px 0 0;
   color: var(--yellow);
@@ -434,6 +511,60 @@ input {
 
 .bottom-panel {
   margin-top: 14px;
+}
+
+.contract-panel {
+  margin-top: 14px;
+}
+
+.contract-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.contract-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.contract-actions span {
+  overflow-wrap: anywhere;
+}
+
+.tx-map {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.tx-map div {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel-3);
+  padding: 10px;
+}
+
+.tx-map span,
+.tx-map small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.tx-map strong {
+  display: block;
+  margin: 6px 0;
+  color: var(--text);
+  font-size: 11px;
+  line-height: 1.25;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .tabs {
@@ -583,7 +714,10 @@ footer {
 
   .kpi-grid,
   .walk-grid,
-  .model-form {
+  .model-form,
+  .flow-steps,
+  .contract-grid,
+  .tx-map {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -607,7 +741,15 @@ footer {
 
   .kpi-grid,
   .walk-grid,
-  .model-form {
+  .model-form,
+  .flow-steps,
+  .contract-grid,
+  .tx-map {
     grid-template-columns: 1fr;
+  }
+
+  .contract-actions {
+    align-items: stretch;
+    flex-direction: column;
   }
 }

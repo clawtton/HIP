@@ -144,17 +144,42 @@ The bottom panel turns fee sharing into an inspectable ledger:
 
 This is where stakers verify that the operator is behaving.
 
-## Slide 14: System Flow
+## Slide 14: Demo - Contract Wiring
+
+![HIP.markets contract wiring](demo-contract-wiring.png)
+
+The demo now exposes the onchain transaction path:
+
+- user connects wallet;
+- user configures deployed vault and HYPE token addresses;
+- user approves HYPE and calls `deposit(uint256)`;
+- operator multisig calls `escrowStakeToController()`;
+- risk council records HIP-3 operator approval and markets-live status.
+
+## Slide 15: Contract Depth
+
+The reference contracts now model more of the actual business:
+
+- `vHIPM` receipt shares;
+- funding, stake-ready, stake-escrowed, approved, live, wind-down, and slashed phases;
+- stake-controller escrow handoff;
+- fee epoch reporting;
+- oracle health reporting;
+- launch checklist and risk-state registry.
+
+## Slide 16: System Flow
 
 1. HYPE holders deposit into the HyperEVM vault.
 2. Vault backs the HIP.markets deployer stake.
-3. HIP.markets launches the first three HIP-3 markets.
-4. Oracle relayers update prices.
-5. Traders generate fees.
-6. Operating, protocol, and reserve deductions are applied.
-7. Net deployer fees distribute to stakers.
+3. Operator multisig escrows funded HYPE to the deployer stake controller.
+4. Risk council records HIP-3 operator approval.
+5. HIP.markets launches the first three HIP-3 markets.
+6. Oracle relayers update prices.
+7. Traders generate fees.
+8. Operating, protocol, and reserve deductions are applied.
+9. Net deployer fees distribute to stakers.
 
-## Slide 15: Economics
+## Slide 17: Economics
 
 Base model:
 
@@ -170,7 +195,7 @@ Benchmark model:
 - Trade.xyz trailing fees imply approximately 3.47% gross APR on the minimum stake;
 - the delta between base and benchmark highlights why market selection and volume concentration matter.
 
-## Slide 16: Risk Controls
+## Slide 18: Risk Controls
 
 HIP.markets wins by being conservative:
 
@@ -181,7 +206,7 @@ HIP.markets wins by being conservative:
 - maintain slashing reserve;
 - pause deposits during oracle incidents.
 
-## Slide 17: Cost Stack
+## Slide 19: Cost Stack
 
 The 500k HYPE stake is the entry ticket, not the full cost of business.
 
@@ -195,7 +220,7 @@ HIP.markets must budget for:
 - legal/compliance work;
 - reserves for slashing, incidents, and low-volume periods.
 
-## Slide 18: MVP
+## Slide 20: MVP
 
 The MVP is intentionally narrow:
 
@@ -207,7 +232,7 @@ The MVP is intentionally narrow:
 - explicit risk disclosure;
 - no third-party operator financing.
 
-## Slide 19: Roadmap
+## Slide 21: Roadmap
 
 V1: prove the operator vault and fee-sharing model.
 
@@ -215,7 +240,7 @@ V2: add more HIP.markets market vaults and automated fee verification.
 
 V3: add risk tranching, secondary vault shares, HIP-4 outcome markets, and possibly third-party operator financing once the trust model is mature.
 
-## Slide 20: Competitive Position
+## Slide 22: Competitive Position
 
 trade.xyz and HyENA operate markets directly.
 
@@ -225,7 +250,7 @@ The wedge is not more markets.
 
 The wedge is turning HYPE holders into economic backers of the market operator.
 
-## Slide 21: Ask
+## Slide 23: Ask
 
 We are looking for:
 
@@ -235,7 +260,7 @@ We are looking for:
 - security reviewers;
 - Hyperliquid ecosystem feedback on deployer custody and fee routing.
 
-## Slide 22: Closing
+## Slide 24: Closing
 
 HIP.markets turns builder-deployed markets into a community-backed operator business.
 

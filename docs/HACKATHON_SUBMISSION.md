@@ -18,10 +18,10 @@ HIP.markets creates a HYPE vault on HyperEVM. Deposited HYPE backs the HIP.marke
 
 ## What We Built
 
-- Static demo for the vault, APR model, and HIP.markets operator console.
-- Economic model with tests.
-- Reference Solidity vault contract.
-- Reference registry contract for market and oracle transparency.
+- Static demo for the vault, APR model, wallet-aware transaction path, and HIP.markets operator console.
+- Economic model with APR and operator-readiness tests.
+- Reference Solidity vault contract with receipt shares, withdrawal queue, reward accounting, stake-controller escrow, operator lifecycle, and slashing accounting.
+- Reference registry contract for launch checklist, market state, oracle health, fee epochs, and risk transparency.
 - Business/product spec.
 - Architecture, oracle, and risk documentation.
 - Pitch deck.
@@ -34,7 +34,8 @@ The demo is inspired by trade.xyz's documented trading interface, but adapted to
 - order-ticket-style HYPE deposit module;
 - summary rows for stake value, builder fees, net rewards, and user rewards;
 - positions-style tabs for vault shares, fee history, oracle updates, and market launches;
-- operator monitor that borrows the spirit of Ghost Mode observability by exposing operator state, fee recipient, oracle updater, reserve, OI utilization, and incident runbook.
+- operator monitor that borrows the spirit of Ghost Mode observability by exposing operator state, fee recipient, oracle updater, reserve, OI utilization, and incident runbook;
+- contract wiring panel for configuring vault/token addresses, connecting a wallet, approving HYPE, depositing, claiming rewards, and showing the multisig/risk-council steps needed to become a slashable HIP-3 operator.
 
 ## Technical Stack
 
@@ -55,6 +56,8 @@ trade.xyz and HyENA are HIP-3 market operators. HIP.markets is also a market ope
 - Conservative caps.
 - Weekly distributions.
 - Public oracle and fee dashboard.
+- Wallet transaction path once deployed addresses are configured.
+- Multisig-controlled handoff from funded vault to HIP-3 stake controller.
 
 ## Demo
 

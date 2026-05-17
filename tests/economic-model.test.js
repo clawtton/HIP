@@ -1,5 +1,9 @@
 import assert from "node:assert/strict";
-import { calculateVaultEconomics, requiredDailyVolumeForApr } from "../src/model.js";
+import {
+  calculateOperatorReadiness,
+  calculateVaultEconomics,
+  requiredDailyVolumeForApr
+} from "../src/model.js";
 
 const base = {
   hypePrice: 42.27,
@@ -30,5 +34,31 @@ assert.ok(requiredVolume < 50_000_000);
 
 assert.throws(() => calculateVaultEconomics({ ...base, deployerShare: 2 }));
 assert.throws(() => requiredDailyVolumeForApr({ ...base, effectiveFeeBps: 0 }));
+
+const readiness = calculateOperatorReadiness({
+  requiredStake: 500_000,
+  fundedHype: 310_420,
+  oracleReady: true,
+  makerReady: false,
+  feeRecipientVerified: true,
+  emergencyPlanReady: true
+});
+
+assert.equal(Math.round(readiness.fundingProgress * 100), 62);
+assert.equal(readiness.remainingHype, 189_580);
+assert.equal(readiness.checklistReady, 3);
+assert.equal(readiness.phase, "Funding");
+
+const readyForStake = calculateOperatorReadiness({
+  ...readiness,
+  requiredStake: 500_000,
+  fundedHype: 500_000,
+  oracleReady: true,
+  makerReady: true,
+  feeRecipientVerified: true,
+  emergencyPlanReady: true
+});
+
+assert.equal(readyForStake.phase, "Ready For HIP-3 Stake");
 
 console.log("economic model tests passed");

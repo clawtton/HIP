@@ -27,10 +27,25 @@ HIP-3 turns market creation into an operator business. Builders can deploy perp 
 1. User deposits HYPE into the HIP.markets vault.
 2. User receives vault shares.
 3. Vault HYPE is allocated toward the HIP.markets HIP-3 deployer stake.
-4. HIP.markets launches and operates HIP-3 markets.
-5. Fees accrue to the HIP.markets fee recipient.
-6. Net fees are distributed to vault stakers after operating fees, protocol fees, and reserve contributions.
-7. Users request withdrawal through a queue that respects HIP-3 stake and market shutdown constraints.
+4. Once the vault reaches the 500,000 HYPE requirement and the risk checklist is complete, the operator multisig escrows stake to the deployer stake controller.
+5. HIP.markets records HIP-3 operator approval and launches markets.
+6. Fees accrue to the HIP.markets fee recipient.
+7. Net fees are distributed to vault stakers after operating fees, protocol fees, and reserve contributions.
+8. Users request withdrawal through a queue that respects HIP-3 stake and market shutdown constraints.
+
+### Operator Lifecycle
+
+The product should make lifecycle state visible instead of hiding it behind an APR number:
+
+| Phase | Meaning | User impact |
+| --- | --- | --- |
+| Funding | Vault has not reached 500,000 HYPE | Deposits open, stake not yet submitted |
+| Stake Ready | Vault has enough HYPE, checklist still being finalized | Deposits may be capped, operator preparing stake submission |
+| Stake Escrowed | HYPE has moved to the deployer stake controller | Withdrawals become more constrained |
+| Operator Approved | HIP.markets has slashable HIP-3 operator status | Market launch can proceed |
+| Markets Live | Markets are trading and generating deployer fees | Rewards can accrue |
+| Wind Down | Deposits paused, stake/markets being unwound | Withdrawals handled through queue/liquidity |
+| Slashed | Stake loss recorded | Principal can be impaired |
 
 ## Key Personas
 

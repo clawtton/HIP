@@ -12,7 +12,7 @@ This submission is intentionally not framed as generic liquid staking. HIP.marke
 - **Category:** Hyperliquid / HyperEVM / HIP-3
 - **Tagline:** Fund the market operator. Share the builder fees.
 - **Core primitive:** HYPE vaults backing HIP.markets' own HIP-3 deployer stake
-- **Submission status:** Prototype, product spec, reference contracts, demo calculator, docs, and pitch deck
+- **Submission status:** Prototype, product spec, deeper reference contracts, wallet-aware demo, docs, and pitch deck
 
 ## What Is Included
 
@@ -67,15 +67,23 @@ The vault UI includes an inspectable fee-history panel so stakers can see how ma
 
 ![HIP.markets fee ledger](presentation/demo-fee-ledger-view.png)
 
+### Contract Connectivity
+
+The app can stay in safe demo mode, but it now exposes the actual transaction path needed after deployment: configure HyperEVM vault and HYPE token addresses, connect a wallet, approve HYPE, deposit into the vault, and show the operator/multisig actions that move funded HYPE toward HIP-3 slashable operator approval.
+
+![HIP.markets contract wiring](presentation/demo-contract-wiring.png)
+
 ## Core User Flow
 
 1. User deposits HYPE into the HIP.markets vault on HyperEVM.
 2. User receives vault shares.
 3. The vault allocates HYPE toward the HIP.markets HIP-3 deployer stake.
-4. HIP.markets launches and operates HIP-3 markets.
-5. HIP.markets runs oracle relayers, risk controls, market-maker programs, and monitoring.
-6. Deployer fees accrue to the HIP.markets fee recipient.
-7. Net fees are distributed to vault stakers after operating fees, protocol fees, and reserve contributions.
+4. Once 500,000 HYPE is funded, the operator multisig escrows stake to the deployer stake controller.
+5. The risk council records HIP-3 operator approval and markets-live status.
+6. HIP.markets launches and operates HIP-3 markets.
+7. HIP.markets runs oracle relayers, risk controls, market-maker programs, and monitoring.
+8. Deployer fees accrue to the HIP.markets fee recipient.
+9. Net fees are distributed to vault stakers after operating fees, protocol fees, and reserve contributions.
 
 ## Why This Matters
 
@@ -98,6 +106,7 @@ The opportunity is not "stake HYPE and forget it." The opportunity is to build a
 - [Risk Register](docs/RISK_REGISTER.md)
 - [UI/UX Research Notes](docs/UI_UX_RESEARCH.md)
 - [Hackathon Submission Summary](docs/HACKATHON_SUBMISSION.md)
+- [Repo Polish Audit](docs/POLISH_AUDIT.md)
 - [Pitch Deck](presentation/HIP_MARKETS_DECK.md)
 
 ## Prototype Components
@@ -119,6 +128,10 @@ The static demo in `app/` shows a terminal-style operator vault interface inspir
 - fee history tabs;
 - oracle health table;
 - operator risk monitor.
+- wallet connection;
+- configurable vault and HYPE token addresses;
+- `approve(HYPE)`, `deposit(uint256)`, and `claimRewards()` transaction path;
+- operator lifecycle from funding to HIP-3 approval and markets live.
 
 ### Economic Model
 
@@ -128,8 +141,8 @@ The model in `src/model.js` powers the calculator and tests. It is deliberately 
 
 The Solidity contracts are reference implementation scaffolds:
 
-- `HipMarketsVault.sol`: deposits, shares, withdrawal queue, reward accounting, allocation to deployer stake controller, slashing loss accounting.
-- `HipMarketsRegistry.sol`: market metadata, oracle health, risk state, and fee-recipient transparency.
+- `HipMarketsVault.sol`: ERC-20-style receipt shares, deposits, withdrawal queue, operator lifecycle, stake-controller escrow, reward accounting, protocol/reserve accounting, slashing loss accounting, and two-step ownership transfer.
+- `HipMarketsRegistry.sol`: operator metadata, launch checklist, market metadata, oracle health, fee epochs, role-separated reporters, risk state, and fee-recipient transparency.
 
 These contracts are not audited and should not be deployed with user funds without a full security review.
 
@@ -141,6 +154,8 @@ These contracts are not audited and should not be deployed with user funds witho
 - Rewards should start as weekly USDC distributions or HYPE distributions after clear accounting.
 - Some HIP-3 deployer actions may still require off-chain/API-wallet execution.
 - Fee routing and deployer custody must be verified before production.
+- The current app can send wallet transactions only after real HyperEVM contract addresses are configured.
+- HIP-3 stake submission is modeled as a controller/multisig handoff until native delegated staking or full HyperEVM control is proven.
 
 ## Validation Checklist
 
